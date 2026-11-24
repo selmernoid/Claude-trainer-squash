@@ -29,7 +29,7 @@ npm run preview   # serve the production build
 ## Deploy
 
 The build is fully static (`base: './'`, hash routing), so `dist/` can be served from any static host.
-`.github/workflows/deploy.yml` publishes to GitHub Pages on every push to `main`. To use it, enable **Settings → Pages → Source: GitHub Actions** in the repository.
+`.github/workflows/deploy.yml` builds and rsyncs `dist/` to a VPS (served by Caddy behind Cloudflare) on every push to `master`. Setup steps are in [`deploy/README.md`](deploy/README.md).
 
 ## Project layout
 
