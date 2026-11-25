@@ -2,15 +2,13 @@ import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { AREAS } from '../data/areas';
 import { DRILLS } from '../data/drills';
-import { LEVELS, type Players } from '../data/types';
+import { LEVELS, LEVEL_LABEL, PLAYERS_LABEL, type Players } from '../data/types';
 import { DrillCard } from '../components/DrillCard';
 import { STORE_KEYS, useStored } from '../lib/storage';
+import { count } from '../lib/uk';
 
-const PLAYERS: { id: Players; label: string }[] = [
-  { id: 'solo', label: 'Solo' },
-  { id: 'pairs', label: 'Pairs' },
-  { id: 'group', label: 'Group (3+)' },
-];
+const PLAYERS: Players[] = ['solo', 'pairs', 'group'];
+const DRILL_FORMS: [string, string, string] = ['вправа', 'вправи', 'вправ'];
 
 export function Drills() {
   const [params, setParams] = useSearchParams();
@@ -43,41 +41,41 @@ export function Drills() {
 
   return (
     <div>
-      <h1>Drill library</h1>
-      <p className="lead">{DRILLS.length} drills for solo practice, pairs and groups. Star the ones you like to find them quickly.</p>
+      <h1>Бібліотека вправ</h1>
+      <p className="lead">{count(DRILLS.length, DRILL_FORMS)} для занять самостійно, у парі й групою. Позначайте зірочкою ті, що сподобалися, щоб швидко їх знаходити.</p>
 
       <div className="card section stack">
-        <input type="search" placeholder="Filter drills…" value={q} onChange={(e) => set('q', e.target.value)} aria-label="Filter drills" />
-        <div className="row" role="group" aria-label="Area">
+        <input type="search" placeholder="Знайти вправу…" value={q} onChange={(e) => set('q', e.target.value)} aria-label="Знайти вправу" />
+        <div className="row" role="group" aria-label="Напрям">
           {AREAS.filter((a) => a.id !== 'gear').map((a) => (
             <button key={a.id} className="chip" aria-pressed={area === a.id} onClick={() => toggle('area', a.id, area)}>{a.name}</button>
           ))}
         </div>
         <div className="row">
-          <div className="row" role="group" aria-label="Players">
+          <div className="row" role="group" aria-label="Гравці">
             {PLAYERS.map((p) => (
-              <button key={p.id} className="chip" aria-pressed={players === p.id} onClick={() => toggle('players', p.id, players)}>{p.label}</button>
+              <button key={p} className="chip" aria-pressed={players === p} onClick={() => toggle('players', p, players)}>{PLAYERS_LABEL[p]}</button>
             ))}
           </div>
-          <div className="row" role="group" aria-label="Level">
+          <div className="row" role="group" aria-label="Рівень">
             {LEVELS.map((l) => (
-              <button key={l} className="chip" aria-pressed={level === l} onClick={() => toggle('level', l, level)} style={{ textTransform: 'capitalize' }}>{l}</button>
+              <button key={l} className="chip" aria-pressed={level === l} onClick={() => toggle('level', l, level)}>{LEVEL_LABEL[l]}</button>
             ))}
           </div>
-          <button className="chip" aria-pressed={saved} onClick={() => set('saved', saved ? '' : '1')}>★ Saved ({favs.length})</button>
+          <button className="chip" aria-pressed={saved} onClick={() => set('saved', saved ? '' : '1')}>★ Збережені ({favs.length})</button>
           {(area || level || players || saved || q) && (
-            <button className="btn ghost small" onClick={() => setParams({}, { replace: true })}>Clear filters</button>
+            <button className="btn ghost small" onClick={() => setParams({}, { replace: true })}>Скинути фільтри</button>
           )}
         </div>
       </div>
 
-      <p className="small muted section" style={{ marginTop: 16 }}>{list.length} drill{list.length === 1 ? '' : 's'}</p>
+      <p className="small muted section" style={{ marginTop: 16 }}>{count(list.length, DRILL_FORMS)}</p>
       {list.length ? (
         <div className="grid">
           {list.map((d) => <DrillCard key={d.id} drill={d} favorite={favs.includes(d.id)} onToggleFavorite={toggleFav} />)}
         </div>
       ) : (
-        <div className="empty card">No drills match these filters.</div>
+        <div className="empty card">Немає вправ із такими фільтрами.</div>
       )}
     </div>
   );

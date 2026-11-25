@@ -1,0 +1,2173 @@
+{
+  "$schema": "./videos.schema.json",
+  "version": 1,
+  "videos": [
+    {
+      "id": "zth-grip",
+      "youtubeId": "3Y_H6DHd2_E",
+      "title": "З нуля до героя: хват",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/grip-ready"
+      ],
+      "note": "Як тримати ракетку й чому трохи відкрита поверхня рятує від тіну. Почніть із цього відео."
+    },
+    {
+      "id": "zth-straight-drive",
+      "youtubeId": "K5haeIzWzmI",
+      "title": "З нуля до героя: прямий драйв",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/forehand-drive",
+        "technique/backhand-drive",
+        "tactics/length-width"
+      ],
+      "drills": [
+        "solo-straight-drives",
+        "pairs-straight-rally"
+      ],
+      "note": "Базовий прямий драйв форхендом і бекхендом: підготовка, точка удару, ціль на фронтальній стіні."
+    },
+    {
+      "id": "zth-drop",
+      "youtubeId": "NspDkaPD1lk",
+      "title": "З нуля до героя: дроп",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/drop-shot"
+      ],
+      "drills": [
+        "solo-feed-drops"
+      ],
+      "note": "Як і коли грати дроп у розіграші, щоб він працював, а не дарував очки."
+    },
+    {
+      "id": "zth-boast",
+      "youtubeId": "XiF68Rddje4",
+      "title": "З нуля до героя: бост",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/boast"
+      ],
+      "drills": [
+        "boast-drive"
+      ],
+      "note": "Техніка босту й ситуації, коли він доречний."
+    },
+    {
+      "id": "zth-lob",
+      "youtubeId": "7LnaBeKfQI4",
+      "title": "З нуля до героя: свічка",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/lob"
+      ],
+      "note": "Навіщо свічка і як зробити її максимально ефективною."
+    },
+    {
+      "id": "zth-serve-return",
+      "youtubeId": "l0rimH_eOJ8",
+      "title": "З нуля до героя: подача й прийом",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "serve-return"
+      ],
+      "topics": [
+        "serve-return/serve-basics",
+        "serve-return/return-of-serve"
+      ],
+      "drills": [
+        "service-box-targets",
+        "serve-return-pattern"
+      ],
+      "note": "Базова подача, прийом і як використовувати їхні варіанти."
+    },
+    {
+      "id": "forehand-basic",
+      "youtubeId": "0NLB5Mhrgyw",
+      "title": "Техніка форхенду",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/forehand-drive"
+      ],
+      "note": "Проста базова техніка форхенду для кращого контролю м'яча, для будь-якого рівня."
+    },
+    {
+      "id": "forehand-analysis",
+      "youtubeId": "8z2Qjrn56T8",
+      "title": "Драйв з форхенду: підрізка, плоский чи закритий удар?",
+      "kind": "analysis",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/forehand-drive"
+      ],
+      "note": "Технічний розбір: як положення ракетки й обертання змінюють політ м'яча."
+    },
+    {
+      "id": "forehand-slowmo",
+      "youtubeId": "4f5oB8auxyo",
+      "title": "Драйв з форхенду в уповільненні",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/forehand-drive"
+      ],
+      "note": "Повний замах у сповільненому повторі: зручно дивитися на підготовку й завершення."
+    },
+    {
+      "id": "backhand-pdh",
+      "youtubeId": "zSHNwCPgVY8",
+      "title": "Як грати драйв з бекхенду",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/backhand-drive"
+      ],
+      "note": "Коротка порада: техніка бекхенду, звідки береться сила й як маскувати удар."
+    },
+    {
+      "id": "backhand-fundamentals",
+      "youtubeId": "6WFhC5kSi_E",
+      "title": "Бекхенд: технічні основи",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/backhand-drive"
+      ],
+      "note": "Детальний розбір основ драйву з бекхенду."
+    },
+    {
+      "id": "backhand-basic",
+      "youtubeId": "IwSNiTelvmM",
+      "title": "Техніка бекхенду",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/backhand-drive"
+      ],
+      "note": "Базова техніка бекхенду для початківців і досвідченіших гравців."
+    },
+    {
+      "id": "backhand-slowmo",
+      "youtubeId": "A80ylog-pSc",
+      "title": "Драйв з бекхенду в уповільненні",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/backhand-drive"
+      ],
+      "note": "Бекхенд у 60 кадрах на секунду: дивіться на розворот плечей і лікоть."
+    },
+    {
+      "id": "volley-punch",
+      "youtubeId": "d5EGVb3l7go",
+      "title": "Воллей з форхенду «панчем»",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/volley"
+      ],
+      "note": "Короткий замах і ранній удар: основа надійного воллею."
+    },
+    {
+      "id": "volley-backhand-pdh",
+      "youtubeId": "iv8EBKHBIKY",
+      "title": "Як грати воллей з бекхенду",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/volley"
+      ],
+      "note": "Техніка бекхендного воллею й звідки взяти силу."
+    },
+    {
+      "id": "volley-space",
+      "youtubeId": "jmUBYINYku0",
+      "title": "Воллей: як створити простір для замаху",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/volley"
+      ],
+      "note": "Нік Метью пояснює, чому на воллеї важливо мати місце для замаху."
+    },
+    {
+      "id": "volley-options",
+      "youtubeId": "Ag2o1h43ZZ4",
+      "title": "Коли й куди бити з льоту",
+      "kind": "howto",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/volley",
+        "tactics/pressure-tempo"
+      ],
+      "note": "Найкращі варіанти воллею й як обрати момент."
+    },
+    {
+      "id": "volley-attack-strings",
+      "youtubeId": "lw1FImhPXxI",
+      "title": "Просунутий воллей: атака з обертанням",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/volley",
+        "technique/kill-nick"
+      ],
+      "note": "Як додати підрізку короткому воллею, щоб він став небезпечнішим."
+    },
+    {
+      "id": "volley-drop-matthew",
+      "youtubeId": "STbIzDCTH_Q",
+      "title": "Воллей-дроп з форхенду: тренування з Ніком Метью",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/volley",
+        "technique/drop-shot",
+        "tactics/patterns"
+      ],
+      "note": "Нік Метью працює з аматором над хватом, замахом і роботою ніг у воллей-дропі."
+    },
+    {
+      "id": "volley-drop-backhand-slowmo",
+      "youtubeId": "XM_vS0cU8cY",
+      "title": "Воллей-дроп з бекхенду в уповільненні",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/volley",
+        "technique/kill-nick"
+      ],
+      "note": "Воллей-дроп із зони Т під кутом, що дозволяє цілити в нік."
+    },
+    {
+      "id": "drop-forehand",
+      "youtubeId": "2XReclAOCQI",
+      "title": "Дроп з форхенду",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/drop-shot"
+      ],
+      "drills": [
+        "solo-feed-drops"
+      ],
+      "note": "Показ і вправи для кращого форхендного дропу."
+    },
+    {
+      "id": "drop-backhand",
+      "youtubeId": "GvtH4CdlFgk",
+      "title": "Дроп з бекхенду",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/drop-shot"
+      ],
+      "note": "Механіка бекхендного дропу крок за кроком."
+    },
+    {
+      "id": "drop-from-back",
+      "youtubeId": "wQGnO7J4Q50",
+      "title": "Дропи з задньої частини корту",
+      "kind": "howto",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/drop-shot",
+        "tactics/four-corners"
+      ],
+      "note": "Коли довгий дроп доречний і як його зіграти, щоб не підставитися."
+    },
+    {
+      "id": "drop-shorbagy",
+      "youtubeId": "iR5eFmr-Pcw",
+      "title": "Дроп як у Мохамеда Ель-Шорбагі",
+      "kind": "analysis",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/drop-shot"
+      ],
+      "note": "Розбір форхендного дропу чемпіона світу з багатьма уповільненими повторами."
+    },
+    {
+      "id": "boast-psa",
+      "youtubeId": "3pmE74_9OpU",
+      "title": "Вчимося босту: Шабана проти Метью",
+      "kind": "analysis",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/boast"
+      ],
+      "note": "Що таке бост, як і коли його грати, види бостів і типові помилки аматорів на прикладі професіоналів."
+    },
+    {
+      "id": "boast-attacking",
+      "youtubeId": "DnFFsrk-QaI",
+      "title": "Атакувальний бост від двох стін з форхенду",
+      "kind": "howto",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/boast"
+      ],
+      "note": "Як перетворити бост на атаку."
+    },
+    {
+      "id": "boast-trickle",
+      "youtubeId": "QZ9xCdQRxLk",
+      "title": "Бекхендний «трикл-бост»",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/boast"
+      ],
+      "note": "Хитрий короткий бост, що ловить суперника на противоході."
+    },
+    {
+      "id": "boast-return",
+      "youtubeId": "CN-L97MKIg0",
+      "title": "Як відповідати на бост",
+      "kind": "howto",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/boast",
+        "tactics/four-corners"
+      ],
+      "note": "Що робити, коли суперник зіграв бост і ви біжите вперед."
+    },
+    {
+      "id": "drop-and-lob",
+      "youtubeId": "oN0XeGmjM9U",
+      "title": "Дроп і свічка в парі",
+      "kind": "howto",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/lob",
+        "technique/drop-shot",
+        "tactics/four-corners"
+      ],
+      "note": "Чому поєднання дропу й свічки з тієї самої позиції створює проблеми суперникові."
+    },
+    {
+      "id": "survival-lob",
+      "youtubeId": "Flt_6GmuIH0",
+      "title": "Свічка на виживання під тиском",
+      "kind": "howto",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/lob",
+        "tactics/traffic-light"
+      ],
+      "note": "Як залишитися в розіграші, підкинувши м'яч кистю, коли вас притиснули."
+    },
+    {
+      "id": "overhead-kill",
+      "youtubeId": "mH8E5aS8-cI",
+      "title": "Удари над головою",
+      "kind": "howto",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/kill-nick"
+      ],
+      "note": "Як скористатися високим м'ячем і атакувати в нік ударом над головою."
+    },
+    {
+      "id": "volley-kills",
+      "youtubeId": "_MIS0N_TnNs",
+      "title": "Тактика воллей-кілів",
+      "kind": "howto",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/kill-nick",
+        "tactics/traffic-light"
+      ],
+      "note": "Коли кіл з льоту дає більше запасу, ніж дроп."
+    },
+    {
+      "id": "attacking-drive",
+      "youtubeId": "jGrg0WvbaW8",
+      "title": "Атакувальний драйв",
+      "kind": "howto",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/forehand-drive",
+        "tactics/pressure-tempo"
+      ],
+      "note": "Драйв із підрізкою: таймінг і робота зап'ястя."
+    },
+    {
+      "id": "return-originals",
+      "youtubeId": "7zsV_WZiwNw",
+      "title": "Прийом подачі: крок за кроком",
+      "kind": "howto",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "serve-return"
+      ],
+      "topics": [
+        "serve-return/return-of-serve"
+      ],
+      "drills": [
+        "serve-return-pattern"
+      ],
+      "note": "Як професіонал готується до прийому й куди його грає."
+    },
+    {
+      "id": "return-mastering",
+      "youtubeId": "cNmylXZJu5Q",
+      "title": "Прийом подачі: поради й вправи",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "serve-return"
+      ],
+      "topics": [
+        "serve-return/return-of-serve"
+      ],
+      "drills": [
+        "serve-return-pattern"
+      ],
+      "note": "Поради й вправи для прийому, від початківців до досвідчених."
+    },
+    {
+      "id": "return-off-sidewall",
+      "youtubeId": "wb5_EyMJMAY",
+      "title": "Прийом з бекхенду після бічної стіни",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "serve-return"
+      ],
+      "topics": [
+        "serve-return/return-of-serve"
+      ],
+      "note": "Як прийняти високу подачу свічкою, що відскочила від бічної стіни."
+    },
+    {
+      "id": "return-high-volley",
+      "youtubeId": "jEbSa99eRII",
+      "title": "Прийом високим воллеєм з бекхенду",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "serve-return",
+        "technique"
+      ],
+      "topics": [
+        "serve-return/return-of-serve",
+        "technique/volley"
+      ],
+      "note": "Техніка високого бекхендного воллею на прийомі."
+    },
+    {
+      "id": "return-patterns",
+      "youtubeId": "ykk6DEMQV7w",
+      "title": "Як ламати шаблони прийому",
+      "kind": "howto",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "serve-return",
+        "tactics"
+      ],
+      "topics": [
+        "serve-return/return-of-serve",
+        "serve-return/serve-variations"
+      ],
+      "note": "Як створювати й руйнувати очікування суперника на прийомі."
+    },
+    {
+      "id": "split-step-power",
+      "youtubeId": "PjByURIinPQ",
+      "title": "Пересування й спліт-степ",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement"
+      ],
+      "topics": [
+        "movement/split-step"
+      ],
+      "note": "Джонатон Пауер пояснює, що таке спліт-степ, коли його робити й типові помилки."
+    },
+    {
+      "id": "split-step-l1",
+      "youtubeId": "ZyN476gwLb0",
+      "title": "Робота ніг, рівень 1: спліт-степ",
+      "kind": "drill",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "movement"
+      ],
+      "topics": [
+        "movement/split-step"
+      ],
+      "drills": [
+        "ghosting-random"
+      ],
+      "note": "Перший крок серії: невеликий підскок перед кожним ударом."
+    },
+    {
+      "id": "split-step-l2",
+      "youtubeId": "kVisd9SSfs0",
+      "title": "Робота ніг, рівень 2: чотири позиції",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement"
+      ],
+      "topics": [
+        "movement/split-step",
+        "movement/footwork-patterns"
+      ],
+      "drills": [
+        "ghosting-six-point"
+      ],
+      "note": "Рух між чотирма точками, щоб закріпити спліт-степ."
+    },
+    {
+      "id": "lunge-twist-l3",
+      "youtubeId": "pDYOJ0YQ97s",
+      "title": "Робота ніг, рівень 3: випад із поворотом",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement",
+        "fitness"
+      ],
+      "topics": [
+        "movement/footwork-patterns"
+      ],
+      "drills": [
+        "lunge-recover"
+      ],
+      "note": "Переміщення поперек корту з випадом і поворотом корпусу внизу."
+    },
+    {
+      "id": "ghosting-lines",
+      "youtubeId": "zrbxgsBsDac",
+      "title": "Гостинг: лінії й схеми",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement"
+      ],
+      "topics": [
+        "movement/ghosting"
+      ],
+      "drills": [
+        "ghosting-six-point"
+      ],
+      "note": "Гостинг як технічна вправа, а не лише кардіо."
+    },
+    {
+      "id": "ghosting-speed",
+      "youtubeId": "ks4O2kMFaVU",
+      "title": "Гостинг: варіації швидкості",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement",
+        "fitness"
+      ],
+      "topics": [
+        "movement/ghosting",
+        "fitness/speed-agility"
+      ],
+      "drills": [
+        "ghosting-random"
+      ],
+      "note": "Схема гостингу з фокусом на максимально швидкому виході до м'яча."
+    },
+    {
+      "id": "ghosting-patterns",
+      "youtubeId": "FnJQzCRnz7E",
+      "title": "Три схеми гостингу",
+      "kind": "drill",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "movement"
+      ],
+      "topics": [
+        "movement/ghosting"
+      ],
+      "drills": [
+        "ghosting-six-point",
+        "ghosting-front-back"
+      ],
+      "note": "Три схеми, які варто робити щоразу, коли є можливість."
+    },
+    {
+      "id": "ghosting-carter",
+      "youtubeId": "HNuURj_U5ac",
+      "title": "Як гостити ефективно",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement"
+      ],
+      "topics": [
+        "movement/ghosting"
+      ],
+      "note": "Пол Картер про гостинг із метою, а не просто біганину."
+    },
+    {
+      "id": "ghosting-barrington",
+      "youtubeId": "Kzvy7bOooDU",
+      "title": "Гостинг як технічне тренування",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement",
+        "technique"
+      ],
+      "topics": [
+        "movement/ghosting"
+      ],
+      "note": "Джої Беррінгтон показує, як через гостинг покращувати техніку."
+    },
+    {
+      "id": "move-low-extend",
+      "youtubeId": "ABpNU-Whxx8",
+      "title": "Пересування: опуститися й дотягнутися",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement"
+      ],
+      "topics": [
+        "movement/footwork-patterns"
+      ],
+      "drills": [
+        "lunge-recover"
+      ],
+      "note": "Гостинг, що вчить опускатися, тягнутися й залишатися стійким (особливо корисно високим гравцям)."
+    },
+    {
+      "id": "t-timing",
+      "youtubeId": "SyfyWK7dKXA",
+      "title": "Таймінг повернення на Т",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement"
+      ],
+      "topics": [
+        "movement/t-position",
+        "movement/split-step"
+      ],
+      "note": "Як розрахувати повернення, щоб опинитися в позиції саме в момент удару суперника."
+    },
+    {
+      "id": "t-move",
+      "youtubeId": "dZ8AmmlPbgI",
+      "title": "Як швидко й ефективно рухатися на Т",
+      "kind": "howto",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "movement"
+      ],
+      "topics": [
+        "movement/t-position"
+      ],
+      "note": "Ефективне повернення на Т після удару."
+    },
+    {
+      "id": "t-where",
+      "youtubeId": "PgmA0yWlVJg",
+      "title": "Де стояти на Т",
+      "kind": "analysis",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement",
+        "tactics"
+      ],
+      "topics": [
+        "movement/t-position",
+        "tactics/pressure-tempo"
+      ],
+      "note": "Позиція на Т залежно від того, де суперник, і як кут тіла відрізає слабкі удари."
+    },
+    {
+      "id": "t-not-stand",
+      "youtubeId": "6vvIpBpCNk0",
+      "title": "Чому не треба стояти просто на Т",
+      "kind": "analysis",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "movement",
+        "tactics"
+      ],
+      "topics": [
+        "movement/t-position"
+      ],
+      "note": "Розбір пересування професіоналів: де вони насправді чекають на м'яч."
+    },
+    {
+      "id": "t-floating",
+      "youtubeId": "pWDomT72jc8",
+      "title": "«Плаваюча» Т: агресивна позиція",
+      "kind": "howto",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "movement",
+        "tactics"
+      ],
+      "topics": [
+        "movement/t-position",
+        "tactics/pressure-tempo"
+      ],
+      "note": "Агресивна позиція на Т для тих, хто хоче перехоплювати більше м'ячів."
+    },
+    {
+      "id": "t-palmer",
+      "youtubeId": "tN7XctfuVaE",
+      "title": "Девід Палмер: атакувальна позиція на Т",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "movement",
+        "tactics",
+        "technique"
+      ],
+      "topics": [
+        "movement/t-position",
+        "technique/volley"
+      ],
+      "note": "Колишній чемпіон світу про воллеї з Т."
+    },
+    {
+      "id": "footwork-coll",
+      "youtubeId": "FQeJifSu-54",
+      "title": "Вправи на роботу ніг з Полом Коллом",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement",
+        "fitness"
+      ],
+      "topics": [
+        "movement/footwork-patterns",
+        "fitness/speed-agility"
+      ],
+      "note": "Вправи на швидкі ноги від одного з найкращих атлетів туру."
+    },
+    {
+      "id": "movement-routine",
+      "youtubeId": "bx9e4qi1HDs",
+      "title": "Повна програма пересування",
+      "kind": "session",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "movement",
+        "fitness"
+      ],
+      "topics": [
+        "movement/footwork-patterns",
+        "movement/ghosting"
+      ],
+      "note": "Робота ніг і покриття корту в одній програмі."
+    },
+    {
+      "id": "length-width-psa",
+      "youtubeId": "RyqbpOgnm6Q",
+      "title": "Довжина й ширина: розбір Круен проти Ель-Шорбагі",
+      "kind": "analysis",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "tactics"
+      ],
+      "topics": [
+        "tactics/length-width",
+        "tactics/pressure-tempo"
+      ],
+      "note": "Тактичний розбір: довжина, бічна стіна, тиск і різні цілі для того самого удару."
+    },
+    {
+      "id": "patterns-anjema",
+      "youtubeId": "eGo0iPxTbXY",
+      "title": "Атакувальні схеми: воллей-дроп і прямий воллей",
+      "kind": "drill",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "tactics",
+        "technique"
+      ],
+      "topics": [
+        "tactics/patterns"
+      ],
+      "drills": [
+        "feed-and-attack"
+      ],
+      "note": "Лауренс Ян Анйема показує схему з прямим воллей-дропом і закриттям простору."
+    },
+    {
+      "id": "farag-aggressive",
+      "youtubeId": "Z77zrzczWIs",
+      "title": "Алі Фараг: агресивна гра",
+      "kind": "analysis",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "tactics",
+        "mental"
+      ],
+      "topics": [
+        "tactics/pressure-tempo",
+        "tactics/patterns"
+      ],
+      "note": "Агресивний сквош починається з мислення; тактичні й технічні елементи."
+    },
+    {
+      "id": "psych-stratagems",
+      "youtubeId": "OOjlwlEILwo",
+      "title": "П'ять психологічних прийомів, щоб узяти матч під контроль",
+      "kind": "howto",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "mental",
+        "tactics"
+      ],
+      "topics": [
+        "mental/focus",
+        "tactics/opponent-types"
+      ],
+      "note": "Прийоми, які гравці використовують у матчі, і як їх розпізнати в суперника."
+    },
+    {
+      "id": "warmup-crouin",
+      "youtubeId": "AfU2Lk4eJQ0",
+      "title": "Розминка як у професіонала",
+      "kind": "session",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "fitness"
+      ],
+      "topics": [
+        "fitness/warmup-cooldown"
+      ],
+      "drills": [
+        "dynamic-warmup"
+      ],
+      "note": "Віктор Круен показує свою розминку перед матчем туру PSA."
+    },
+    {
+      "id": "warmup-5min",
+      "youtubeId": "2V2NebzCLfg",
+      "title": "5-хвилинна розминка: повторюйте за тренером",
+      "kind": "session",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "fitness"
+      ],
+      "topics": [
+        "fitness/warmup-cooldown"
+      ],
+      "drills": [
+        "dynamic-warmup"
+      ],
+      "note": "Коротка розминка для сквошу, яка поміщається біля корту."
+    },
+    {
+      "id": "warmup-mobility",
+      "youtubeId": "i71oH2eqUH4",
+      "title": "Розминка: мобільність суглобів",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "fitness"
+      ],
+      "topics": [
+        "fitness/warmup-cooldown",
+        "fitness/strength-mobility"
+      ],
+      "drills": [
+        "dynamic-warmup"
+      ],
+      "note": "Гері Нісбет про трифазну розминку; друга фаза — мобільність суглобів."
+    },
+    {
+      "id": "strength-3",
+      "youtubeId": "Q9pVutMeDBk",
+      "title": "Три силові вправи, яких достатньо для сквошу",
+      "kind": "howto",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "fitness"
+      ],
+      "topics": [
+        "fitness/strength-mobility"
+      ],
+      "drills": [
+        "off-court-circuit"
+      ],
+      "note": "Мінімальний набір, що робить сильнішим, швидшим і стійкішим."
+    },
+    {
+      "id": "explosive-3",
+      "youtubeId": "fcUtdrgEIpI",
+      "title": "Вибуховість і швидкість: три вправи",
+      "kind": "howto",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "fitness"
+      ],
+      "topics": [
+        "fitness/speed-agility",
+        "fitness/strength-mobility"
+      ],
+      "note": "Сильні ноги = вибуховий рух на корті."
+    },
+    {
+      "id": "sc-workout",
+      "youtubeId": "VIxOXKMl8SM",
+      "title": "Силове й функціональне тренування для сквошистів",
+      "kind": "session",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "fitness"
+      ],
+      "topics": [
+        "fitness/strength-mobility",
+        "fitness/speed-agility"
+      ],
+      "note": "Тренування на вибуховість і швидкість у залі."
+    },
+    {
+      "id": "intervals-nisbet",
+      "youtubeId": "M7h1494FSU0",
+      "title": "Інтервальні тренування для сквошу",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "fitness"
+      ],
+      "topics": [
+        "fitness/intervals"
+      ],
+      "drills": [
+        "court-sprints",
+        "ghosting-random"
+      ],
+      "note": "Як додати специфічні для сквошу інтервали до свого графіка."
+    },
+    {
+      "id": "home-power",
+      "youtubeId": "tHoJUWfTC5w",
+      "title": "Силове тренування вдома",
+      "kind": "session",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "fitness"
+      ],
+      "topics": [
+        "fitness/strength-mobility"
+      ],
+      "drills": [
+        "off-court-circuit"
+      ],
+      "note": "Повне тренування майже без інвентарю."
+    },
+    {
+      "id": "home-session",
+      "youtubeId": "2iGoaPWkzzM",
+      "title": "Тренування вдома: 25 хвилин разом із тренером",
+      "kind": "session",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "fitness",
+        "movement",
+        "technique"
+      ],
+      "topics": [
+        "movement/ghosting",
+        "fitness/intervals"
+      ],
+      "drills": [
+        "shadow-swings"
+      ],
+      "note": "Потрібні лише трохи місця й ракетка."
+    },
+    {
+      "id": "court-speed",
+      "youtubeId": "cD7otsCwOn8",
+      "title": "Тренування швидкості на корті",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "fitness",
+        "movement"
+      ],
+      "topics": [
+        "fitness/speed-agility"
+      ],
+      "drills": [
+        "court-sprints"
+      ],
+      "note": "Швидкий цілеспрямований рух по корту."
+    },
+    {
+      "id": "makin-strength",
+      "youtubeId": "me73tI6ZTgg",
+      "title": "Як Джоел Мейкін будує силу",
+      "kind": "session",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "fitness"
+      ],
+      "topics": [
+        "fitness/strength-mobility"
+      ],
+      "note": "Справжня програма в залі гравця топ-рівня."
+    },
+    {
+      "id": "mental-pressure",
+      "youtubeId": "G93Ud0vvIho",
+      "title": "Ментальна стійкість: зменште тиск на себе",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "mental"
+      ],
+      "topics": [
+        "mental/nerves",
+        "mental/focus"
+      ],
+      "note": "Як підходити до дня матчу, не з'їдаючи себе."
+    },
+    {
+      "id": "mindset-psa",
+      "youtubeId": "8vYAFQCJzME",
+      "title": "Основи переможного мислення",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "mental"
+      ],
+      "topics": [
+        "mental/focus",
+        "mental/match-plan"
+      ],
+      "note": "Фундамент правильного мислення для гравця."
+    },
+    {
+      "id": "rules-beginners",
+      "youtubeId": "v6iT8DUU05E",
+      "title": "Правила й рахунок для початківців",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "rules"
+      ],
+      "topics": [
+        "rules/scoring",
+        "rules/service-rules"
+      ],
+      "note": "Базові правила, рахунок і подача простою мовою."
+    },
+    {
+      "id": "rules-101-lets",
+      "youtubeId": "17IqrJNNvFY",
+      "title": "Що таке строук, лет і ноу лет",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "rules"
+      ],
+      "topics": [
+        "rules/lets-strokes"
+      ],
+      "drills": [
+        "referee-a-match"
+      ],
+      "note": "Лі Дрю пояснює три основні рішення судді."
+    },
+    {
+      "id": "rules-lets-examples",
+      "youtubeId": "Js_JxGdO-lg",
+      "title": "Лети, ноу лети й строуки на прикладах",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "rules"
+      ],
+      "topics": [
+        "rules/lets-strokes"
+      ],
+      "drills": [
+        "referee-a-match"
+      ],
+      "note": "Різниця між рішеннями з прикладами з матчів."
+    },
+    {
+      "id": "rules-hit-opponent",
+      "youtubeId": "q9u4ur8BUKg",
+      "title": "Влучили м'ячем у суперника: строук чи лет?",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "rules"
+      ],
+      "topics": [
+        "rules/lets-strokes"
+      ],
+      "note": "Чому влучання в суперника не завжди приносить очко."
+    },
+    {
+      "id": "referee-guide",
+      "youtubeId": "1USAgEP5opQ",
+      "title": "Як судити матч",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "rules"
+      ],
+      "topics": [
+        "rules/lets-strokes",
+        "rules/scoring"
+      ],
+      "drills": [
+        "referee-a-match"
+      ],
+      "note": "Лі Дрю про правила й про те, що потрібно, щоб судити гру."
+    },
+    {
+      "id": "rackets-guide",
+      "youtubeId": "q7qfW8YuiB4",
+      "title": "Повний гід по ракетках",
+      "kind": "lesson",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "gear"
+      ],
+      "topics": [
+        "gear/racket"
+      ],
+      "note": "Вага, баланс, матеріали, форма голови, струнна сітка й жорсткість."
+    },
+    {
+      "id": "strings",
+      "youtubeId": "H0lx_QlliwY",
+      "title": "Струни для ракетки",
+      "kind": "howto",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "gear"
+      ],
+      "topics": [
+        "gear/strings"
+      ],
+      "note": "Натяг, тип струн і чому не варто їх поправляти після кожного удару."
+    },
+    {
+      "id": "ball-beginners",
+      "youtubeId": "XkCvlwQD0-0",
+      "title": "Як обрати м'яч для сквошу",
+      "kind": "howto",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "gear"
+      ],
+      "topics": [
+        "gear/balls"
+      ],
+      "note": "Чому вибір м'яча — найважливіше рішення для новачка."
+    },
+    {
+      "id": "ball-dots",
+      "youtubeId": "UgWtXJgVhiE",
+      "title": "Точки на м'ячі: що вони означають",
+      "kind": "howto",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "gear"
+      ],
+      "topics": [
+        "gear/balls"
+      ],
+      "note": "Розбираємося в кольорах і точках, щоб не заплутатися."
+    },
+    {
+      "id": "solo-5-drills",
+      "youtubeId": "4LJjEODRVOY",
+      "title": "П'ять самостійних вправ для кожного",
+      "kind": "drill",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/forehand-drive",
+        "technique/volley"
+      ],
+      "drills": [
+        "solo-straight-drives",
+        "figure-eight-volleys"
+      ],
+      "note": "Набір сольних вправ, з якими можна йти на корт без партнера."
+    },
+    {
+      "id": "solo-routine-mega",
+      "youtubeId": "WXXkGQ9n1j8",
+      "title": "Сольна програма, щоб використати час на корті максимально",
+      "kind": "session",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "drills": [
+        "solo-straight-drives",
+        "figure-eight-volleys",
+        "solo-feed-drops"
+      ],
+      "note": "«Мега-сет»: основна вправа, що чергується з п'ятьма іншими."
+    },
+    {
+      "id": "solo-double-cross",
+      "youtubeId": "gBFCEPWlwvY",
+      "title": "Сольна програма 02: подвійний крос",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "serve-return"
+      ],
+      "topics": [
+        "technique/volley",
+        "serve-return/return-of-serve"
+      ],
+      "drills": [
+        "figure-eight-volleys"
+      ],
+      "note": "Відчуття висоти й короткий замах; корисно для прийому подачі."
+    },
+    {
+      "id": "solo-corner-informer",
+      "youtubeId": "YowlRLRkqrk",
+      "title": "Сольна програма 03: адаптація замаху",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/forehand-drive",
+        "technique/backhand-drive"
+      ],
+      "note": "Як підлаштовувати замах під незручні м'ячі."
+    },
+    {
+      "id": "solo-straight-around",
+      "youtubeId": "FdHvw457gSI",
+      "title": "Сольна програма 04: мікротаймінг",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/forehand-drive",
+        "technique/backhand-drive"
+      ],
+      "drills": [
+        "solo-straight-drives"
+      ],
+      "note": "Відстань до м'яча й точний таймінг удару."
+    },
+    {
+      "id": "solo-side-to-side",
+      "youtubeId": "GJGwUq_jAO4",
+      "title": "«З боку в бік»: найкраща сольна вправа",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "fitness"
+      ],
+      "topics": [
+        "technique/volley"
+      ],
+      "drills": [
+        "fast-hands-volleys",
+        "figure-eight-volleys"
+      ],
+      "note": "Загальна підготовка, таймінг і руки в одній вправі."
+    },
+    {
+      "id": "solo-drop-matrix",
+      "youtubeId": "EtFrQiJBZp4",
+      "title": "Матриця дропів: сольна вправа з Ніком Метью",
+      "kind": "drill",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/drop-shot"
+      ],
+      "drills": [
+        "solo-feed-drops"
+      ],
+      "note": "Як прокачати дропи наодинці."
+    },
+    {
+      "id": "double-volley-matthew",
+      "youtubeId": "s5PVgkXnaM4",
+      "title": "Вправа «подвійний воллей» Ніка Метью",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/volley"
+      ],
+      "drills": [
+        "fast-hands-volleys"
+      ],
+      "note": "Короткий замах і швидке повернення ракетки в позицію."
+    },
+    {
+      "id": "volley-drills",
+      "youtubeId": "hjpQ3j2raWI",
+      "title": "Найкращі вправи на воллей",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/volley"
+      ],
+      "drills": [
+        "figure-eight-volleys",
+        "pairs-volley-drives"
+      ],
+      "note": "Вправи на точність, таймінг і стабільність воллеїв."
+    },
+    {
+      "id": "boast-drive-routine",
+      "youtubeId": "1hTvf0CY2Zc",
+      "title": "Вправа 1: бост і драйв",
+      "kind": "drill",
+      "lang": "en",
+      "level": "beginner",
+      "areas": [
+        "technique",
+        "movement"
+      ],
+      "topics": [
+        "technique/boast",
+        "technique/forehand-drive"
+      ],
+      "drills": [
+        "boast-drive"
+      ],
+      "note": "Класична парна вправа на два базові удари, ідеальна для розминки."
+    },
+    {
+      "id": "drop-drive-routine",
+      "youtubeId": "YKSEz2_8MAY",
+      "title": "Вправа 2: дроп і драйв",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/drop-shot",
+        "tactics/four-corners"
+      ],
+      "drills": [
+        "drop-and-drive"
+      ],
+      "note": "Наступний крок після босту й драйву."
+    },
+    {
+      "id": "boast-cross-straight",
+      "youtubeId": "PzwYvTq33Wc",
+      "title": "Бост, крос і прямий драйв",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/boast",
+        "tactics/length-width"
+      ],
+      "drills": [
+        "boast-drive",
+        "straight-and-cross"
+      ],
+      "note": "Розширена версія босту й драйву з кросом."
+    },
+    {
+      "id": "boast-drop-drive-3",
+      "youtubeId": "fP7_6dl8dZQ",
+      "title": "Бост, дроп і драйв утрьох",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/drop-shot",
+        "technique/boast"
+      ],
+      "drills": [
+        "boast-drive",
+        "drop-and-drive"
+      ],
+      "note": "Двоє набрасують, третій працює спереду над дропом і драйвом."
+    },
+    {
+      "id": "pairs-drops",
+      "youtubeId": "82-b_pr54Bo",
+      "title": "Парна вправа: дропи",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/drop-shot"
+      ],
+      "drills": [
+        "drop-and-drive",
+        "counter-drop-game"
+      ],
+      "note": "Партнер набрасує, ви відпрацьовуєте дропи."
+    },
+    {
+      "id": "boast-cross-lob",
+      "youtubeId": "4uk0s6JqvyY",
+      "title": "Бост і крос-свічка",
+      "kind": "drill",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "tactics"
+      ],
+      "topics": [
+        "technique/lob",
+        "technique/boast"
+      ],
+      "drills": [
+        "boast-drive"
+      ],
+      "note": "Коротка вправа від колишнього чемпіона світу Кріса Вокера."
+    },
+    {
+      "id": "pro-practice-gilis-kennedy",
+      "youtubeId": "jFdyjANR5aw",
+      "title": "Тренування Тінне Гіліс і Джини Кеннеді",
+      "kind": "session",
+      "lang": "en",
+      "level": "advanced",
+      "areas": [
+        "technique",
+        "movement",
+        "tactics"
+      ],
+      "drills": [
+        "boast-drive",
+        "drop-and-drive"
+      ],
+      "note": "Як тренуються дві гравчині першої десятки світу."
+    },
+    {
+      "id": "pro-training-condensed",
+      "youtubeId": "gJgGKGO16a0",
+      "title": "Професійне тренування за 3 хвилини",
+      "kind": "session",
+      "lang": "en",
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "movement"
+      ],
+      "note": "Годинне тренування профі в стислому вигляді: ідеї для власних занять."
+    },
+    {
+      "id": "match-ashour-elshorbagy-2012",
+      "youtubeId": "QynkA2BInlE",
+      "title": "Найкращий матч в історії? Ашур проти Ель-Шорбагі",
+      "kind": "match",
+      "lang": "en",
+      "areas": [
+        "tactics",
+        "movement"
+      ],
+      "topics": [
+        "tactics/patterns"
+      ],
+      "tags": [
+        "legend"
+      ],
+      "note": "Фінал чемпіонату світу 2012 року, який часто називають найкращим матчем у сквоші."
+    },
+    {
+      "id": "match-farag-asal-final",
+      "youtubeId": "5X32HYQ5zBc",
+      "title": "Фараг проти Асала: фінал чемпіонату світу",
+      "kind": "match",
+      "lang": "en",
+      "areas": [
+        "tactics"
+      ],
+      "topics": [
+        "tactics/pressure-tempo"
+      ],
+      "tags": [
+        "legend"
+      ],
+      "note": "Фінал чемпіонату світу 2024/25. Дивіться, як Фараг і Асал керують Т."
+    },
+    {
+      "id": "match-asal-ibrahim",
+      "youtubeId": "-j0h5FF0XpM",
+      "title": "Асал проти Ібрагіма",
+      "kind": "match",
+      "lang": "en",
+      "areas": [
+        "tactics"
+      ],
+      "tags": [
+        "legend"
+      ],
+      "note": "Фінал чемпіонату світу 2025/26."
+    },
+    {
+      "id": "match-longest-womens",
+      "youtubeId": "7lWpZrlDq7U",
+      "title": "Найдовший жіночий матч в історії PSA",
+      "kind": "match",
+      "lang": "en",
+      "areas": [
+        "fitness",
+        "mental"
+      ],
+      "topics": [
+        "fitness/aerobic-base",
+        "mental/focus"
+      ],
+      "tags": [
+        "legend"
+      ],
+      "note": "Матч, що показує, навіщо потрібні фізпідготовка й психологія."
+    },
+    {
+      "id": "fun-trickshots",
+      "youtubeId": "9tTOpf5ZEqs",
+      "title": "Найкращі трюкові удари",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [
+        "technique"
+      ],
+      "tags": [
+        "tricks"
+      ],
+      "note": "Добірка найсміливіших ударів, що потрапили в камери SquashTV."
+    },
+    {
+      "id": "fun-hotshots",
+      "title": "HotShots: найкращі удари туру PSA",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [
+        "technique"
+      ],
+      "tags": [
+        "tricks"
+      ],
+      "note": "Плейлист найкрасивіших ударів найкращих гравців світу.",
+      "playlistId": "PL95572793AE156E8A"
+    },
+    {
+      "id": "fun-applauded",
+      "youtubeId": "VXezpydCJZM",
+      "title": "25 ударів, яким аплодував навіть суперник",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [
+        "technique"
+      ],
+      "tags": [
+        "tricks"
+      ],
+      "note": "Коли удар настільки добрий, що суперник плескає в долоні."
+    },
+    {
+      "id": "fun-notshots",
+      "youtubeId": "O6CgH-wXcpY",
+      "title": "NotShots: курйози й провали сезону",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [],
+      "tags": [
+        "fails"
+      ],
+      "note": "Найсмішніші моменти, промахи й «антиудари» сезону 2019/20."
+    },
+    {
+      "id": "fun-isolation-tricks",
+      "youtubeId": "8-JGdMFOH4g",
+      "title": "Трюки на карантині",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [
+        "technique"
+      ],
+      "tags": [
+        "tricks"
+      ],
+      "note": "Як гравці по всьому світу тренувалися вдома під час локдауну."
+    },
+    {
+      "id": "fun-ashour-trick",
+      "youtubeId": "-Hl8pgPq9Co",
+      "title": "Трюк Рамі Ашура",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [
+        "technique"
+      ],
+      "tags": [
+        "tricks"
+      ],
+      "note": "Юний гравець показує Рамі Ашуру, як виконати один із його фірмових трюків."
+    },
+    {
+      "id": "fun-callender",
+      "youtubeId": "re_N6YRQqTA",
+      "title": "Трюкові удари: Джамал Каллендер",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [
+        "technique"
+      ],
+      "tags": [
+        "tricks"
+      ],
+      "note": "Колекція трюкових ударів."
+    },
+    {
+      "id": "fun-megarallies",
+      "title": "Мегарозіграші туру PSA",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [
+        "fitness",
+        "movement"
+      ],
+      "tags": [
+        "rallies"
+      ],
+      "note": "Плейлист найдовших і найнапруженіших розіграшів туру.",
+      "playlistId": "PLxmhcE3iz1lD5xCNQHrToi154gPaFCF0i"
+    },
+    {
+      "id": "fun-longest-rally",
+      "youtubeId": "PTYINAYp5jM",
+      "title": "Найдовший розіграш в історії?",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [
+        "fitness",
+        "movement"
+      ],
+      "topics": [
+        "fitness/aerobic-base"
+      ],
+      "tags": [
+        "rallies"
+      ],
+      "note": "Розіграш Каріма Ель-Торкі й Тома Волша, один із найдовших у професійному турі."
+    },
+    {
+      "id": "fun-best-rally",
+      "youtubeId": "2rUo_X0o_T0",
+      "title": "Найкращий розіграш? Товариський матч",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [
+        "movement"
+      ],
+      "tags": [
+        "rallies"
+      ],
+      "note": "Розіграш Рафала Конєчного й Пшемислава Рейчака, який глядачі називають одним із найкращих."
+    },
+    {
+      "id": "fun-top10-worlds-2425",
+      "youtubeId": "bV58EvsgXRc",
+      "title": "Топ-10 розіграшів чемпіонату світу 2024/25",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [],
+      "tags": [
+        "rallies"
+      ],
+      "note": "Найкращі розіграші чемпіонату світу."
+    },
+    {
+      "id": "fun-top10-finals-2425",
+      "youtubeId": "hArT9qG52EY",
+      "title": "Топ-10 розіграшів Фіналу туру 2024/25",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [],
+      "tags": [
+        "rallies"
+      ],
+      "note": "Найкращі розіграші підсумкового турніру сезону."
+    },
+    {
+      "id": "fun-gaultier",
+      "youtubeId": "8w0kpeWhqMs",
+      "title": "Грегорі Готьє: топ-5 розіграшів",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [],
+      "tags": [
+        "rallies"
+      ],
+      "note": "П'ять найкращих розіграшів французького чемпіона світу."
+    },
+    {
+      "id": "fun-serme",
+      "youtubeId": "bE3scokXGAs",
+      "title": "Каміль Серм: топ-5 розіграшів",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [],
+      "tags": [
+        "rallies"
+      ],
+      "note": "Найкраще з 450 матчів французької чемпіонки."
+    },
+    {
+      "id": "fun-finals-moments",
+      "youtubeId": "Ruv7n-DwJN4",
+      "title": "Фінали туру PSA: найкращі моменти",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [],
+      "tags": [
+        "legend"
+      ],
+      "note": "Добірка найяскравіших моментів підсумкових турнірів."
+    },
+    {
+      "id": "fun-olympics-la28",
+      "youtubeId": "KFWPrnoOz00",
+      "title": "Сквош на Олімпіаді: мрія стає реальністю",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [],
+      "tags": [
+        "olympics"
+      ],
+      "note": "Сквош дебютує на Олімпійських іграх 2028 року в Лос-Анджелесі."
+    },
+    {
+      "id": "fun-what-is-squash",
+      "youtubeId": "Vhw1y070WhI",
+      "title": "Що таке сквош? Олімпіада-2028",
+      "kind": "fun",
+      "lang": "en",
+      "areas": [],
+      "tags": [
+        "olympics"
+      ],
+      "note": "Діти з програми StreetSquash пояснюють, що це за гра, на честь включення сквошу в Олімпіаду."
+    },
+    {
+      "id": "uk-beginners",
+      "title": "Сквош для початківців (українською)",
+      "kind": "lesson",
+      "lang": "uk",
+      "level": "beginner",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/grip-ready"
+      ],
+      "note": "Шукаємо якісний український урок для новачків. Поки що відкриває пошук на YouTube.",
+      "query": "сквош для початківців українською"
+    },
+    {
+      "id": "uk-rules",
+      "title": "Правила сквошу (українською)",
+      "kind": "lesson",
+      "lang": "uk",
+      "level": "beginner",
+      "areas": [
+        "rules"
+      ],
+      "topics": [
+        "rules/scoring"
+      ],
+      "note": "Шукаємо українськомовне пояснення правил і рахунку. Поки що відкриває пошук на YouTube.",
+      "query": "сквош правила гри українською"
+    }
+  ],
+  "collections": [
+    {
+      "id": "zero-to-hero",
+      "title": "З нуля до героя",
+      "description": "Серія базових уроків: хват, драйв, дроп, бост, свічка, подача. Ідеальний старт для новачка.",
+      "level": "beginner",
+      "videoIds": [
+        "zth-grip",
+        "zth-straight-drive",
+        "zth-drop",
+        "zth-boast",
+        "zth-lob",
+        "zth-serve-return"
+      ]
+    },
+    {
+      "id": "first-month",
+      "title": "Перший місяць у сквоші",
+      "description": "Що подивитися в перші тижні: хват, драйв, правила, м'яч, розминка й рух на Т.",
+      "level": "beginner",
+      "videoIds": [
+        "zth-grip",
+        "rules-beginners",
+        "ball-beginners",
+        "warmup-5min",
+        "zth-straight-drive",
+        "t-move",
+        "ghosting-patterns",
+        "rules-101-lets"
+      ]
+    },
+    {
+      "id": "footwork-levels",
+      "title": "Робота ніг: три рівні",
+      "description": "Від спліт-степу до випаду з поворотом: прогресія вправ на пересування.",
+      "level": "intermediate",
+      "videoIds": [
+        "split-step-power",
+        "split-step-l1",
+        "split-step-l2",
+        "lunge-twist-l3",
+        "move-low-extend",
+        "footwork-coll"
+      ]
+    },
+    {
+      "id": "ghosting",
+      "title": "Усе про гостинг",
+      "description": "Гостинг як технічна й фізична вправа: схеми, швидкість, якість.",
+      "level": "intermediate",
+      "videoIds": [
+        "ghosting-patterns",
+        "ghosting-carter",
+        "ghosting-lines",
+        "ghosting-speed",
+        "ghosting-barrington",
+        "movement-routine"
+      ]
+    },
+    {
+      "id": "solo-routines",
+      "title": "Тренуюся сам",
+      "description": "Сольні програми й вправи, коли немає партнера.",
+      "level": "intermediate",
+      "videoIds": [
+        "solo-5-drills",
+        "solo-double-cross",
+        "solo-corner-informer",
+        "solo-straight-around",
+        "solo-side-to-side",
+        "solo-drop-matrix",
+        "solo-routine-mega"
+      ]
+    },
+    {
+      "id": "pairs-routines",
+      "title": "Вправи в парі",
+      "description": "Класичні парні й групові вправи: бост-драйв, дроп-драйв і їхні варіації.",
+      "level": "intermediate",
+      "videoIds": [
+        "boast-drive-routine",
+        "drop-drive-routine",
+        "boast-cross-straight",
+        "boast-cross-lob",
+        "pairs-drops",
+        "boast-drop-drive-3"
+      ]
+    },
+    {
+      "id": "volley-masterclass",
+      "title": "Майстер-клас з воллею",
+      "description": "Від базового «панчу» до воллей-дропу й кілів з льоту.",
+      "level": "intermediate",
+      "videoIds": [
+        "volley-punch",
+        "volley-backhand-pdh",
+        "volley-space",
+        "volley-options",
+        "double-volley-matthew",
+        "volley-drop-matthew",
+        "volley-attack-strings",
+        "volley-kills"
+      ]
+    },
+    {
+      "id": "fitness-plan",
+      "title": "Фізпідготовка для сквошу",
+      "description": "Розминка, сила, вибуховість і інтервали: збирайте свій тиждень.",
+      "level": "intermediate",
+      "videoIds": [
+        "warmup-5min",
+        "warmup-mobility",
+        "strength-3",
+        "explosive-3",
+        "intervals-nisbet",
+        "court-speed",
+        "home-power"
+      ]
+    },
+    {
+      "id": "rules-referee",
+      "title": "Правила й суддівство",
+      "description": "Рахунок, подача, лети й строуки та як судити гру.",
+      "level": "beginner",
+      "videoIds": [
+        "rules-beginners",
+        "rules-101-lets",
+        "rules-lets-examples",
+        "rules-hit-opponent",
+        "referee-guide"
+      ]
+    },
+    {
+      "id": "watch-the-pros",
+      "title": "Вчимося в профі",
+      "description": "Розбори ударів і тактики професіоналів, їхні тренування й великі матчі.",
+      "level": "advanced",
+      "videoIds": [
+        "length-width-psa",
+        "boast-psa",
+        "drop-shorbagy",
+        "t-not-stand",
+        "farag-aggressive",
+        "pro-practice-gilis-kennedy",
+        "match-ashour-elshorbagy-2012"
+      ]
+    }
+  ]
+}

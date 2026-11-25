@@ -1,15 +1,16 @@
 import { FormEvent, useEffect, useState } from 'react';
-import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 const NAV = [
-  { to: '/learn', label: 'Learn' },
-  { to: '/drills', label: 'Drills' },
-  { to: '/assess', label: 'Assess' },
-  { to: '/plan', label: 'Plan' },
-  { to: '/ghosting', label: 'Ghosting' },
-  { to: '/log', label: 'Log' },
-  { to: '/quiz', label: 'Rules quiz' },
-  { to: '/glossary', label: 'Glossary' },
+  { to: '/learn', label: 'Навчання' },
+  { to: '/videos', label: 'Відео' },
+  { to: '/drills', label: 'Вправи' },
+  { to: '/assess', label: 'Самооцінка' },
+  { to: '/plan', label: 'План' },
+  { to: '/ghosting', label: 'Гостинг' },
+  { to: '/log', label: 'Журнал' },
+  { to: '/quiz', label: 'Правила' },
+  { to: '/fun', label: 'Цікаве' },
 ];
 
 export function Layout() {
@@ -30,10 +31,10 @@ export function Layout() {
     <>
       <header className="header">
         <div className="header-inner">
-          <NavLink to="/" className="brand" aria-label="Squash Trainer home">
-            <span className="brand-dot" aria-hidden /> Squash Trainer
+          <NavLink to="/" className="brand" aria-label="Сквош-тренер, головна">
+            <span className="brand-dot" aria-hidden /> Сквош-тренер
           </NavLink>
-          <nav className="nav" aria-label="Main">
+          <nav className="nav" aria-label="Головне меню">
             {NAV.map((n) => (
               <NavLink key={n.to} to={n.to} className={({ isActive }) => (isActive ? 'active' : undefined)}>
                 {n.label}
@@ -41,7 +42,7 @@ export function Layout() {
             ))}
           </nav>
           <form className="header-search" role="search" onSubmit={submit}>
-            <input type="search" placeholder="Search…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search the portal" />
+            <input type="search" placeholder="Пошук…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Пошук по порталу" />
           </form>
         </div>
       </header>
@@ -49,9 +50,16 @@ export function Layout() {
         <Outlet />
       </main>
       <footer className="footer">
-        Anonymous by design — no accounts, no tracking. Anything you save stays in this browser.
+        <nav className="row" style={{ justifyContent: 'center', marginBottom: 10 }} aria-label="Додатково">
+          <Link to="/glossary">Словник термінів</Link>
+          <Link to="/videos">Усі відео</Link>
+          <Link to="/fun">Цікаве</Link>
+        </nav>
+        Анонімно: без акаунтів і стеження. Усе, що ви зберігаєте, залишається в цьому браузері. Відео з YouTube завантажуються лише
+        після натискання.
         <br />
-        Advice assumes a right-handed player; left-handers mirror it. Rules summaries are simplified; see the World Squash Federation rules for official wording.
+        Поради розраховані на праворукого гравця; лівшам варто їх дзеркалити. Правила наведено спрощено; офіційне формулювання див.
+        у правилах World Squash Federation.
       </footer>
     </>
   );

@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run videos:validate && tsc -b && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "videos:validate": "node --experimental-strip-types --no-warnings scripts/videos.mjs validate",
+    "videos:check": "node --experimental-strip-types --no-warnings scripts/videos.mjs check",
+    "videos:resolve": "node --experimental-strip-types --no-warnings scripts/videos.mjs resolve"
   },
   "dependencies": {
     "react": "^18.3.1",

@@ -1,19 +1,21 @@
 import { Link, useParams } from 'react-router-dom';
 import { AREAS, AREA_BY_ID, findTopic } from '../data/areas';
 import { DRILL_BY_ID, DRILLS } from '../data/drills';
-import type { AreaId, Level } from '../data/types';
+import { LEVEL_LABEL, type AreaId, type Level } from '../data/types';
+import { videosForArea, videosForTopic } from '../data/videos';
 import { DrillCard } from '../components/DrillCard';
+import { SubtitlesTip, VideoGrid } from '../components/Video';
 import { NotFound } from './NotFound';
 
 export function LevelBadge({ level }: { level: Level }) {
-  return <span className={`badge ${level}`}>{level}</span>;
+  return <span className={`badge ${level}`}>{LEVEL_LABEL[level]}</span>;
 }
 
 export function LearnIndex() {
   return (
     <div>
-      <h1>Learn</h1>
-      <p className="lead">Pick an area. Each topic has key points, common mistakes with fixes, coaching cues, and drills to practise it.</p>
+      <h1>Навчання</h1>
+      <p className="lead">Оберіть напрям. Кожна тема містить ключові моменти, типові помилки з виправленнями, підказки на корт, вправи й відео. Незнайомий термін? Загляньте в <Link to="/glossary">словник</Link>.</p>
       <div className="stack section">
         {AREAS.map((a) => (
           <section key={a.id} className="card" style={{ borderLeft: `4px solid ${a.color}` }}>
@@ -38,9 +40,10 @@ export function AreaPage() {
   const area = AREA_BY_ID[areaId as AreaId];
   if (!area) return <NotFound />;
   const drills = DRILLS.filter((d) => d.areas.includes(area.id));
+  const videos = videosForArea(area.id);
   return (
     <div style={{ ['--area' as string]: area.color }}>
-      <div className="breadcrumbs"><Link to="/learn">Learn</Link> / {area.name}</div>
+      <div className="breadcrumbs"><Link to="/learn">Навчання</Link> / {area.name}</div>
       <h1>{area.name}</h1>
       <p className="lead">{area.intro}</p>
       <div className="stack section">
@@ -60,12 +63,21 @@ export function AreaPage() {
       {drills.length > 0 && (
         <section className="section">
           <div className="section-head">
-            <h2>Drills for {area.name.toLowerCase()}</h2>
-            <Link className="small" to={`/drills?area=${area.id}`}>Filter in library →</Link>
+            <h2>Вправи: {area.name.toLowerCase()}</h2>
+            <Link className="small" to={`/drills?area=${area.id}`}>Відкрити в бібліотеці →</Link>
           </div>
           <div className="grid">
             {drills.map((d) => <DrillCard key={d.id} drill={d} />)}
           </div>
+        </section>
+      )}
+      {videos.length > 0 && (
+        <section className="section">
+          <div className="section-head">
+            <h2>Відео: {area.name.toLowerCase()}</h2>
+            <Link className="small" to={`/videos?area=${area.id}`}>Усі відео напряму →</Link>
+          </div>
+          <VideoGrid videos={videos.slice(0, 6)} />
         </section>
       )}
     </div>
@@ -81,11 +93,12 @@ export function TopicPage() {
   const prev = area.topics[idx - 1];
   const next = area.topics[idx + 1];
   const drills = (topic.drillIds ?? []).map((id) => DRILL_BY_ID[id]).filter(Boolean);
+  const videos = videosForTopic(area.id, topic.id);
 
   return (
     <div style={{ ['--area' as string]: area.color, maxWidth: 820 }}>
       <div className="breadcrumbs">
-        <Link to="/learn">Learn</Link> / <Link to={`/learn/${area.id}`}>{area.name}</Link> / {topic.title}
+        <Link to="/learn">Навчання</Link> / <Link to={`/learn/${area.id}`}>{area.name}</Link> / {topic.title}
       </div>
       <div className="row" style={{ marginBottom: 6 }}>
         <h1 style={{ margin: 0 }}>{topic.title}</h1>
@@ -94,7 +107,7 @@ export function TopicPage() {
       <p className="lead">{topic.summary}</p>
 
       <section className="card section">
-        <h2>Key points</h2>
+        <h2>Ключові моменти</h2>
         <ul className="keypoints" style={{ marginBottom: 0 }}>
           {topic.keyPoints.map((k) => <li key={k}>{k}</li>)}
         </ul>
@@ -102,11 +115,11 @@ export function TopicPage() {
 
       {topic.mistakes && topic.mistakes.length > 0 && (
         <section className="card">
-          <h2>Common mistakes</h2>
+          <h2>Типові помилки</h2>
           {topic.mistakes.map((m) => (
             <div key={m.mistake} className="mistake">
               <div><strong>{m.mistake}</strong></div>
-              <div className="fix"><strong>Fix:</strong> {m.fix}</div>
+              <div className="fix"><strong>Як виправити:</strong> {m.fix}</div>
             </div>
           ))}
         </section>
@@ -114,20 +127,28 @@ export function TopicPage() {
 
       {topic.cues && topic.cues.length > 0 && (
         <section className="card">
-          <h2>Coaching cues</h2>
-          <p className="small muted">Short phrases to say to yourself on court.</p>
+          <h2>Підказки на корт</h2>
+          <p className="small muted">Короткі фрази, які варто казати собі під час гри.</p>
           <div className="cues">{topic.cues.map((c) => <span key={c} className="cue">{c}</span>)}</div>
+        </section>
+      )}
+
+      {videos.length > 0 && (
+        <section className="section">
+          <h2>Подивіться, як це роблять</h2>
+          <VideoGrid videos={videos} />
+          <SubtitlesTip />
         </section>
       )}
 
       {drills.length > 0 && (
         <section className="section">
-          <h2>Practise it</h2>
+          <h2>Відпрацюйте</h2>
           <div className="grid">{drills.map((d) => <DrillCard key={d.id} drill={d} />)}</div>
         </section>
       )}
 
-      <nav className="row section" aria-label="Topic navigation">
+      <nav className="row section" aria-label="Навігація темами">
         {prev && <Link className="btn" to={`/learn/${area.id}/${prev.id}`}>← {prev.title}</Link>}
         <span className="spacer" />
         {next && <Link className="btn" to={`/learn/${area.id}/${next.id}`}>{next.title} →</Link>}

@@ -10,9 +10,10 @@ import { Log } from './pages/Log';
 import { Quiz } from './pages/Quiz';
 import { Glossary } from './pages/Glossary';
 import { Search } from './pages/Search';
+import { CollectionPage, Fun, VideoPage, VideosIndex } from './pages/Videos';
 import { NotFound } from './pages/NotFound';
 
-// HashRouter keeps deep links working on any static host (e.g. GitHub Pages) without server rewrites.
+// HashRouter keeps deep links working on any static host without server rewrites.
 export function App() {
   return (
     <HashRouter>
@@ -22,6 +23,10 @@ export function App() {
           <Route path="learn" element={<LearnIndex />} />
           <Route path="learn/:areaId" element={<AreaPage />} />
           <Route path="learn/:areaId/:topicId" element={<TopicPage />} />
+          <Route path="videos" element={<VideosIndex />} />
+          <Route path="videos/set/:setId" element={<CollectionPage />} />
+          <Route path="videos/:videoId" element={<VideoPage />} />
+          <Route path="fun" element={<Fun />} />
           <Route path="drills" element={<Drills />} />
           <Route path="assess" element={<Assess />} />
           <Route path="plan" element={<Plan />} />

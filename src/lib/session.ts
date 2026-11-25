@@ -55,7 +55,7 @@ export function buildSession(o: SessionOptions): SessionBlock[] {
   const blocks: SessionBlock[] = [];
   const warm = DRILL_BY_ID['dynamic-warmup'];
   const warmMin = o.minutes >= 60 ? 8 : 5;
-  blocks.push({ label: 'Warm-up', drill: warm, minutes: warmMin });
+  blocks.push({ label: 'Розминка', drill: warm, minutes: warmMin });
 
   const coolMin = o.minutes >= 45 ? 5 : 3;
   let remaining = o.minutes - warmMin - coolMin;
@@ -66,10 +66,11 @@ export function buildSession(o: SessionOptions): SessionBlock[] {
   const others = shuffle(pool.filter((d) => !focused.includes(d)));
 
   // Finish with a game (pairs/group) or a movement/fitness block (solo) when there is time.
+  // Game drills are picked by id because names are translated.
   const finisher = (() => {
     const games = o.players === 'solo'
       ? pool.filter((d) => d.areas.includes('fitness') || d.areas.includes('movement'))
-      : pool.filter((d) => /game|winner/i.test(d.name));
+      : pool.filter((d) => /game|winner/.test(d.id));
     // Keep at least 15 minutes for focus work.
     return shuffle(games).find((d) => !focused.slice(0, 3).includes(d) && remaining - d.minutes >= 15);
   })();
@@ -81,27 +82,27 @@ export function buildSession(o: SessionOptions): SessionBlock[] {
     if (used.has(d.id) || d.id === finisher?.id) continue;
     const mins = Math.min(d.minutes, remaining);
     if (mins < Math.min(5, d.minutes)) continue;
-    blocks.push({ label: d.areas.some((a) => focus.includes(a)) ? 'Focus' : 'Support', drill: d, minutes: mins });
+    blocks.push({ label: d.areas.some((a) => focus.includes(a)) ? 'Фокус' : 'Додатково', drill: d, minutes: mins });
     used.add(d.id);
     remaining -= mins;
   }
-  if (finisher) blocks.push({ label: 'Finisher', drill: finisher, minutes: finisher.minutes });
+  if (finisher) blocks.push({ label: 'Гра на завершення', drill: finisher, minutes: finisher.minutes });
   // Spread any leftover minutes over the main blocks.
-  const main = blocks.filter((b) => b.label !== 'Warm-up');
+  const main = blocks.filter((b) => b.label !== 'Розминка');
   for (let i = 0; remaining > 0 && main.length; i++, remaining--) main[i % main.length].minutes++;
 
   blocks.push({
-    label: 'Cool-down',
+    label: 'Заминка',
     drill: {
       id: 'cool-down',
-      name: 'Cool-down & stretch',
+      name: 'Заминка й розтяжка',
       areas: ['fitness'],
       players: ['solo', 'pairs', 'group'],
       level: 'beginner',
       minutes: coolMin,
-      summary: 'Easy movement, then light stretches for calves, hips, hamstrings and back. Note one takeaway in your log.',
+      summary: 'Легкий рух, потім легка розтяжка литок, стегон, задньої поверхні стегна й спини. Запишіть у журнал один висновок.',
       steps: [],
-      goal: 'Heart rate down, one lesson noted.',
+      goal: 'Пульс знизився, один урок записано.',
     },
     minutes: coolMin,
   });

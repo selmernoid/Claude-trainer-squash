@@ -1,12 +1,12 @@
 export type CourtSpot = 'FL' | 'FR' | 'ML' | 'MR' | 'BL' | 'BR';
 
 export const SPOTS: Record<CourtSpot, { x: number; y: number; label: string; speech: string }> = {
-  FL: { x: 85, y: 110, label: 'Front left', speech: 'front left' },
-  FR: { x: 555, y: 110, label: 'Front right', speech: 'front right' },
-  ML: { x: 70, y: 470, label: 'Volley left', speech: 'volley left' },
-  MR: { x: 570, y: 470, label: 'Volley right', speech: 'volley right' },
-  BL: { x: 95, y: 880, label: 'Back left', speech: 'back left' },
-  BR: { x: 545, y: 880, label: 'Back right', speech: 'back right' },
+  FL: { x: 85, y: 110, label: 'Спереду ліворуч', speech: 'спереду ліворуч' },
+  FR: { x: 555, y: 110, label: 'Спереду праворуч', speech: 'спереду праворуч' },
+  ML: { x: 70, y: 470, label: 'Воллей ліворуч', speech: 'воллей ліворуч' },
+  MR: { x: 570, y: 470, label: 'Воллей праворуч', speech: 'воллей праворуч' },
+  BL: { x: 95, y: 880, label: 'Ззаду ліворуч', speech: 'ззаду ліворуч' },
+  BR: { x: 545, y: 880, label: 'Ззаду праворуч', speech: 'ззаду праворуч' },
 };
 
 export const T_POS = { x: 320, y: 580 };
@@ -27,7 +27,7 @@ export function Court({ target, enabled, className, decorative }: Props) {
       className={className}
       role={decorative ? undefined : 'img'}
       aria-hidden={decorative || undefined}
-      aria-label={decorative ? undefined : t ? `Court diagram, target: ${t.label}` : 'Squash court diagram'}
+      aria-label={decorative ? undefined : t ? `Схема корту, ціль: ${t.label}` : 'Схема корту для сквошу'}
     >
       {decorative ? (
         <rect x="0" y="0" width="640" height="975" fill="none" stroke="#fff" strokeWidth="8" />
@@ -60,7 +60,7 @@ export function Court({ target, enabled, className, decorative }: Props) {
               <circle cx={t.x} cy={t.y} r="38" fill="var(--accent)" stroke="var(--brand)" strokeWidth="6" />
             </>
           )}
-          <text x="320" y="40" textAnchor="middle" fontSize="24" fill="var(--court-line)" fontWeight="700" opacity="0.9">FRONT WALL</text>
+          <text x="320" y="40" textAnchor="middle" fontSize="24" fill="var(--court-line)" fontWeight="700" opacity="0.9">ФРОНТАЛЬНА СТІНА</text>
         </>
       )}
     </svg>

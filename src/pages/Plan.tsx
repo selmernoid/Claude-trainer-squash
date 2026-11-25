@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { AREAS, AREA_BY_ID } from '../data/areas';
-import { LEVELS, type AreaId, type Level, type Players } from '../data/types';
+import { LEVELS, LEVEL_LABEL, PLAYERS_LABEL, type AreaId, type Level, type Players } from '../data/types';
 import { buildSession } from '../lib/session';
 import { readStore, STORE_KEYS } from '../lib/storage';
 import { estimatedLevel, lowestAreas, type SavedAssessment } from './Assess';
@@ -41,44 +41,44 @@ export function Plan() {
 
   return (
     <div>
-      <h1>Session builder</h1>
-      <p className="lead">Tell us how long you have and who you're with. You'll get a structured session — warm-up, focus drills, a finisher and a cool-down.</p>
+      <h1>Конструктор тренування</h1>
+      <p className="lead">Скажіть, скільки маєте часу і з ким граєте. Ви отримаєте структуроване заняття: розминка, основні вправи, гра на завершення й заминка.</p>
 
       <div className="card section stack no-print">
         <div className="row">
-          <strong style={{ minWidth: 90 }}>Time</strong>
+          <strong style={{ minWidth: 90 }}>Час</strong>
           {DURATIONS.map((d) => (
-            <button key={d} className="chip" aria-pressed={minutes === d} onClick={() => setMinutes(d)}>{d} min</button>
+            <button key={d} className="chip" aria-pressed={minutes === d} onClick={() => setMinutes(d)}>{d} хв</button>
           ))}
         </div>
         <div className="row">
-          <strong style={{ minWidth: 90 }}>Players</strong>
+          <strong style={{ minWidth: 90 }}>Гравці</strong>
           {(['solo', 'pairs', 'group'] as Players[]).map((p) => (
-            <button key={p} className="chip" aria-pressed={players === p} onClick={() => setPlayers(p)} style={{ textTransform: 'capitalize' }}>{p}</button>
+            <button key={p} className="chip" aria-pressed={players === p} onClick={() => setPlayers(p)}>{PLAYERS_LABEL[p]}</button>
           ))}
         </div>
         <div className="row">
-          <strong style={{ minWidth: 90 }}>Level</strong>
+          <strong style={{ minWidth: 90 }}>Рівень</strong>
           {LEVELS.map((l) => (
-            <button key={l} className="chip" aria-pressed={level === l} onClick={() => setLevel(l)} style={{ textTransform: 'capitalize' }}>{l}</button>
+            <button key={l} className="chip" aria-pressed={level === l} onClick={() => setLevel(l)}>{LEVEL_LABEL[l]}</button>
           ))}
         </div>
         <div className="row">
-          <strong style={{ minWidth: 90 }}>Focus</strong>
+          <strong style={{ minWidth: 90 }}>Фокус</strong>
           {FOCUSABLE.map((a) => (
             <button key={a.id} className="chip" aria-pressed={focus.includes(a.id)} onClick={() => toggleFocus(a.id)}>{a.name}</button>
           ))}
         </div>
-        {last && !params.get('focus') && <p className="small muted" style={{ margin: 0 }}>Focus and level were pre-filled from your <Link to="/assess">self-assessment</Link>.</p>}
+        {last && !params.get('focus') && <p className="small muted" style={{ margin: 0 }}>Фокус і рівень заповнено за вашою <Link to="/assess">самооцінкою</Link>.</p>}
       </div>
 
       <section className="section">
         <div className="section-head">
-          <h2>Your {total}-minute {players} session</h2>
+          <h2>Ваше тренування: {total} хв, {PLAYERS_LABEL[players].toLowerCase()}</h2>
           <div className="row no-print">
-            <button className="btn" onClick={() => setSeed((s) => s + 1)}>↻ Shuffle</button>
-            <button className="btn" onClick={() => window.print()}>Print</button>
-            <button className="btn primary" onClick={logIt}>Log this session</button>
+            <button className="btn" onClick={() => setSeed((s) => s + 1)}>↻ Інший варіант</button>
+            <button className="btn" onClick={() => window.print()}>Друк</button>
+            <button className="btn primary" onClick={logIt}>Записати в журнал</button>
           </div>
         </div>
         <ol className="stack" style={{ listStyle: 'none', padding: 0 }}>
@@ -87,17 +87,17 @@ export function Plan() {
               <div className="row" style={{ alignItems: 'baseline' }}>
                 <span className="badge">{b.label}</span>
                 <h3 style={{ margin: 0, flex: 1 }}>{b.drill.name}</h3>
-                <strong style={{ fontVariantNumeric: 'tabular-nums' }}>{b.minutes} min</strong>
+                <strong style={{ fontVariantNumeric: 'tabular-nums' }}>{b.minutes} хв</strong>
               </div>
               <p className="small" style={{ margin: '6px 0 0' }}>{b.drill.summary}</p>
               {b.drill.steps.length > 0 && (
                 <details>
-                  <summary className="small" style={{ cursor: 'pointer', color: 'var(--link)', fontWeight: 600, marginTop: 6 }}>Steps</summary>
+                  <summary className="small" style={{ cursor: 'pointer', color: 'var(--link)', fontWeight: 600, marginTop: 6 }}>Кроки</summary>
                   <ol className="small" style={{ marginTop: 8 }}>{b.drill.steps.map((s) => <li key={s}>{s}</li>)}</ol>
-                  <p className="small" style={{ margin: 0 }}><strong>Goal:</strong> {b.drill.goal}</p>
+                  <p className="small" style={{ margin: 0 }}><strong>Мета:</strong> {b.drill.goal}</p>
                 </details>
               )}
-              {b.drill.id === 'ghosting-random' && <Link className="small no-print" to="/ghosting">Open Ghosting trainer →</Link>}
+              {b.drill.id === 'ghosting-random' && <Link className="small no-print" to="/ghosting">Відкрити тренажер гостингу →</Link>}
             </li>
           ))}
         </ol>
