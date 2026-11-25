@@ -2022,62 +2022,134 @@
       "query": "сквош правила гри українською"
     },
     {
-      "id": "pick-x8ku-d9aofy",
+      "id": "backhand-corner-boast",
       "youtubeId": "x8KU_d9AOFY",
-      "kind": "howto",
+      "title": "Бост із заднього кута з бекхенду: основи",
+      "originalTitle": "Squash Backhand corner boast basics",
+      "kind": "lesson",
       "lang": "en",
-      "areas": []
+      "level": "beginner",
+      "areas": [
+        "technique",
+        "movement"
+      ],
+      "topics": [
+        "technique/boast",
+        "movement/footwork-patterns"
+      ],
+      "drills": [
+        "boast-drive",
+        "solo-boast-chase"
+      ],
+      "note": "Як із заднього лівого кута зіграти бост бекхендом: позиція, підготовка й кут удару в бічну стіну."
     },
     {
-      "id": "pick-a8f-itrz9z8",
+      "id": "back-wall-boast",
       "youtubeId": "A8f_ItrZ9Z8",
-      "kind": "howto",
+      "title": "Бост від задньої стіни",
+      "originalTitle": "How To Hit Back Wall Boasts",
+      "kind": "lesson",
       "lang": "en",
-      "areas": []
+      "level": "intermediate",
+      "areas": [
+        "technique"
+      ],
+      "topics": [
+        "technique/boast"
+      ],
+      "note": "Рятівний удар, коли м'яч пройшов повз вас: бити в задню стіну, щоб він долетів до фронтальної. Коли це доречно й як не віддати легкий м'яч."
     },
     {
-      "id": "pick-ziakdbqjtcw",
+      "id": "deep-backhand-corner",
       "youtubeId": "ziakdbqJtCw",
+      "title": "Глибокий бекхендний кут: поради",
+      "originalTitle": "Squash Tips: 🚀 Deep Backhand Corner Tips 🚀",
       "kind": "howto",
       "lang": "en",
-      "areas": []
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "movement"
+      ],
+      "topics": [
+        "technique/backhand-drive",
+        "movement/footwork-patterns"
+      ],
+      "drills": [
+        "solo-straight-drives",
+        "pairs-straight-rally"
+      ],
+      "note": "Робота ніг і замах, коли м'яч щільно в задньому лівому куті: як дістати його й повернути на довжину."
     },
     {
-      "id": "pick-3rgvkzs8kl4",
+      "id": "deep-forehand-corner",
       "youtubeId": "3rGVkZS8KL4",
+      "title": "Як витягнути м'яч із глибокого форхендного кута",
+      "originalTitle": "Squash Tips: Digging The Ball Out Of The Deep Forehand",
       "kind": "howto",
       "lang": "en",
-      "areas": []
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "movement"
+      ],
+      "topics": [
+        "technique/forehand-drive",
+        "movement/footwork-patterns"
+      ],
+      "drills": [
+        "solo-straight-drives",
+        "pairs-straight-rally"
+      ],
+      "note": "Короткий замах, відкрита ракетка й правильна відстань до м'яча, коли він притиснутий у задньому правому куті."
     },
     {
-      "id": "pick-qzdddswbyai",
+      "id": "out-of-back-corners",
       "youtubeId": "QzDdDswBYAI",
+      "title": "Як вибиратися із задніх кутів",
+      "originalTitle": "Get The Ball Out Of The Back Corners",
       "kind": "howto",
       "lang": "en",
-      "areas": []
+      "level": "intermediate",
+      "areas": [
+        "technique",
+        "movement",
+        "tactics"
+      ],
+      "topics": [
+        "movement/footwork-patterns",
+        "technique/boast",
+        "tactics/traffic-light"
+      ],
+      "drills": [
+        "boast-drive"
+      ],
+      "note": "Які варіанти є, коли м'яч у задньому куті (прямий драйв, свічка, бост), і як обрати безпечний."
     },
     {
-      "id": "pick-3mlvey3e0hu",
+      "id": "beginners-guide",
       "youtubeId": "3Mlvey3E0HU",
-      "kind": "howto",
+      "title": "Сквош для початківців: спорядження, правила й тактика",
+      "originalTitle": "How To Play Squash: A Beginners Guide – Equipment, Rules and Tactics! ☄️",
+      "kind": "lesson",
       "lang": "en",
-      "areas": []
+      "level": "beginner",
+      "areas": [
+        "gear",
+        "rules",
+        "tactics"
+      ],
+      "topics": [
+        "rules/scoring",
+        "rules/service-rules",
+        "gear/racket",
+        "gear/balls",
+        "tactics/length-width"
+      ],
+      "note": "Усе для першого виходу на корт в одному відео: що купити, як рахувати очки й про що думати під час розіграшу."
     }
   ],
   "collections": [
-    {
-      "id": "recommended",
-      "title": "Рекомендоване",
-      "description": "Відео, які радимо подивитися в першу чергу.",
-      "videoIds": [
-        "pick-x8ku-d9aofy",
-        "pick-a8f-itrz9z8",
-        "pick-ziakdbqjtcw",
-        "pick-3rgvkzs8kl4",
-        "pick-qzdddswbyai",
-        "pick-3mlvey3e0hu"
-      ]
-    },
     {
       "id": "zero-to-hero",
       "title": "З нуля до героя",
@@ -2098,6 +2170,7 @@
       "description": "Що подивитися в перші тижні: хват, драйв, правила, м'яч, розминка й рух на Т.",
       "level": "beginner",
       "videoIds": [
+        "beginners-guide",
         "zth-grip",
         "rules-beginners",
         "ball-beginners",
@@ -2106,6 +2179,19 @@
         "t-move",
         "ghosting-patterns",
         "rules-101-lets"
+      ]
+    },
+    {
+      "id": "back-corners",
+      "title": "Як вибратися із задніх кутів",
+      "description": "Задні кути — найнезручніше місце на корті. Від базового босту до витягування щільних м'ячів і удару від задньої стіни.",
+      "level": "intermediate",
+      "videoIds": [
+        "backhand-corner-boast",
+        "deep-backhand-corner",
+        "deep-forehand-corner",
+        "out-of-back-corners",
+        "back-wall-boast"
       ]
     },
     {
