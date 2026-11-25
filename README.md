@@ -65,7 +65,9 @@ npm run videos:check                    # oEmbed: hide removed / non-embeddable 
 YOUTUBE_API_KEY=… npm run videos:resolve  # fill youtubeId for entries that only have a query
 ```
 
-All three accept `--dry-run` and `--only=<id,id>`; `check` also takes `--stale-days=N`. A typical populating process: append entries with a `query`, run `videos:resolve` (new matches get `status: "auto"`), have a person review them and set `status: "ok"`, then run `videos:check` on a schedule. Entries with status `unavailable` or `not-embeddable` are hidden from the portal automatically.
+All three accept `--dry-run` and `--only=<id,id>`; `check` also takes `--stale-days=N`.
+
+The deploy workflow runs `videos:check` before every build (the result is used for that build only, not committed), so removed or non-embeddable videos disappear from the site and every video gets its real YouTube title and channel. That means a video can be added with just an `id`, `youtubeId`, `kind`, `lang` and `areas`: without a `title` the portal shows the YouTube title. A typical populating process: append entries with a `query`, run `videos:resolve` (new matches get `status: "auto"`), have a person review them and set `status: "ok"`, then run `videos:check` on a schedule. Entries with status `unavailable` or `not-embeddable` are hidden from the portal automatically.
 
 Players use `youtube-nocookie.com` and load only after a click; until then only the thumbnail from `i.ytimg.com` is fetched. Most videos are in English, so the portal tells viewers how to switch on auto-translated Ukrainian subtitles.
 

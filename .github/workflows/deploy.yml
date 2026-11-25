@@ -19,6 +19,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # Ask YouTube which videos still exist and can be embedded, and fill in titles/channels.
+      # The result only affects this build (not committed). A YouTube hiccup must not block the deploy.
+      - name: Check videos
+        run: npm run videos:check
+        continue-on-error: true
       - run: npm run build
       - name: Rsync dist/ to VPS
         uses: burnett01/rsync-deployments@7.0.1

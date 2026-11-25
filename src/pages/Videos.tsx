@@ -189,7 +189,7 @@ export function VideoPage() {
               <p className="small muted" style={{ margin: '6px 0 0' }}>На YouTube: «{video.originalTitle}»</p>
             )}
           </div>
-          <p style={{ margin: 0 }}>{video.note}</p>
+          {video.note && <p style={{ margin: 0 }}>{video.note}</p>}
           <div className="row">
             <a className="btn" href={watchUrl(video)} target="_blank" rel="noopener noreferrer">Відкрити на YouTube ↗</a>
             {video.areas.map((a) => (
@@ -234,7 +234,7 @@ export function CollectionPage() {
             <h2 style={{ margin: '2px 0 6px' }}><Link to={`/videos/${current.id}`} style={{ color: 'inherit' }}>{current.title}</Link></h2>
             <VideoMeta video={current} />
           </div>
-          <p style={{ margin: 0 }}>{current.note}</p>
+          {current.note && <p style={{ margin: 0 }}>{current.note}</p>}
           <div className="row">
             <button className="btn" disabled={idx === 0} onClick={() => go(idx - 1)}>← Попереднє</button>
             <span className="spacer" />
