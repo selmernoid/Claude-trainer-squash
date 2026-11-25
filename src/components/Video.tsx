@@ -81,7 +81,7 @@ export function VideoCard({ video }: { video: Video }) {
       <div className="video-body">
         <h3><Link to={`/videos/${video.id}`}>{video.title}</Link></h3>
         <VideoMeta video={video} />
-        <p className="small muted" style={{ margin: 0 }}>{video.note}</p>
+        {video.note && <p className="small muted" style={{ margin: 0 }}>{video.note}</p>}
       </div>
     </article>
   );

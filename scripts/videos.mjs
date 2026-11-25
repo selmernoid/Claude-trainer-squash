@@ -68,8 +68,7 @@ async function validate() {
     if (!v.id || !SLUG.test(v.id)) err(at, 'id must be a lowercase slug');
     if (ids.has(v.id)) err(at, 'duplicate id');
     ids.add(v.id);
-    if (!v.title) err(at, 'title is required');
-    if (!v.note) err(at, 'note is required');
+    if (!v.title && !v.youtubeId && !v.playlistId) err(at, 'title is required when there is no youtubeId/playlistId');
     if (!v.lang) err(at, 'lang is required');
     if (!KINDS.includes(v.kind)) err(at, `kind must be one of ${KINDS.join(', ')}`);
     if (v.level && !LEVELS.includes(v.level)) err(at, `unknown level ${v.level}`);

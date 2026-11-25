@@ -41,7 +41,7 @@ export function Search() {
           <div className="stack">
             {videos.map((v) => (
               <Link key={v.id} className="card topic-link" to={`/videos/${v.id}`}>
-                <div><h3 style={{ margin: 0 }}>{v.title}</h3><p className="small muted" style={{ margin: 0 }}>{KIND_LABEL[v.kind]} · {v.note}</p></div>
+                <div><h3 style={{ margin: 0 }}>{v.title}</h3><p className="small muted" style={{ margin: 0 }}>{KIND_LABEL[v.kind]}{v.note && ` · ${v.note}`}</p></div>
               </Link>
             ))}
           </div>

@@ -2020,9 +2020,64 @@
       ],
       "note": "Шукаємо українськомовне пояснення правил і рахунку. Поки що відкриває пошук на YouTube.",
       "query": "сквош правила гри українською"
+    },
+    {
+      "id": "pick-x8ku-d9aofy",
+      "youtubeId": "x8KU_d9AOFY",
+      "kind": "howto",
+      "lang": "en",
+      "areas": []
+    },
+    {
+      "id": "pick-a8f-itrz9z8",
+      "youtubeId": "A8f_ItrZ9Z8",
+      "kind": "howto",
+      "lang": "en",
+      "areas": []
+    },
+    {
+      "id": "pick-ziakdbqjtcw",
+      "youtubeId": "ziakdbqJtCw",
+      "kind": "howto",
+      "lang": "en",
+      "areas": []
+    },
+    {
+      "id": "pick-3rgvkzs8kl4",
+      "youtubeId": "3rGVkZS8KL4",
+      "kind": "howto",
+      "lang": "en",
+      "areas": []
+    },
+    {
+      "id": "pick-qzdddswbyai",
+      "youtubeId": "QzDdDswBYAI",
+      "kind": "howto",
+      "lang": "en",
+      "areas": []
+    },
+    {
+      "id": "pick-3mlvey3e0hu",
+      "youtubeId": "3Mlvey3E0HU",
+      "kind": "howto",
+      "lang": "en",
+      "areas": []
     }
   ],
   "collections": [
+    {
+      "id": "recommended",
+      "title": "Рекомендоване",
+      "description": "Відео, які радимо подивитися в першу чергу.",
+      "videoIds": [
+        "pick-x8ku-d9aofy",
+        "pick-a8f-itrz9z8",
+        "pick-ziakdbqjtcw",
+        "pick-3rgvkzs8kl4",
+        "pick-qzdddswbyai",
+        "pick-3mlvey3e0hu"
+      ]
+    },
     {
       "id": "zero-to-hero",
       "title": "З нуля до героя",

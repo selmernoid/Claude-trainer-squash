@@ -70,7 +70,12 @@ export const langLabel = (lang: string) => LANG_LABEL[lang] ?? lang;
 // Записи, які скрипт перевірки позначив як недоступні, не показуємо.
 const visible = (v: Video) => !v.status || v.status === 'ok' || v.status === 'auto';
 
-export const VIDEOS: Video[] = (db.videos as Video[]).filter(visible);
+// title/note у JSON необов'язкові: відео можна додати лише за посиланням, а назву й канал
+// підставить `npm run videos:check` (він запускається й під час деплою).
+type RawVideo = Omit<Video, 'title' | 'note'> & { title?: string; note?: string };
+const normalize = (v: RawVideo): Video => ({ ...v, title: v.title || v.originalTitle || 'Відео з YouTube', note: v.note ?? '' });
+
+export const VIDEOS: Video[] = (db.videos as RawVideo[]).map(normalize).filter(visible);
 export const VIDEO_BY_ID = Object.fromEntries(VIDEOS.map((v) => [v.id, v])) as Record<string, Video>;
 
 export const COLLECTIONS: VideoCollection[] = (db.collections as VideoCollection[])
