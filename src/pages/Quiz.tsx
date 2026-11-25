@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RULES_QUIZ } from '../data/quiz';
 import { STORE_KEYS, useStored } from '../lib/storage';
+import { count } from '../lib/uk';
 
 function shuffled<T>(a: T[]) {
   const b = [...a];
@@ -37,21 +38,21 @@ export function Quiz() {
 
   return (
     <div style={{ maxWidth: 720 }}>
-      <h1>Rules quiz</h1>
-      <p className="lead">Let, stroke or no let? {RULES_QUIZ.length} real-match scenarios. Read the <Link to="/learn/rules/lets-strokes">lets & strokes guide</Link> first if you like.</p>
+      <h1>Вікторина з правил</h1>
+      <p className="lead">Лет, строук чи ноу лет? {count(RULES_QUIZ.length, ['ситуація', 'ситуації', 'ситуацій'])} з реальних матчів. За бажання спершу прочитайте <Link to="/learn/rules/lets-strokes">про лети й строуки</Link> або подивіться <Link to="/videos/set/rules-referee">відео про правила</Link>.</p>
 
       {finished ? (
         <div className="card section" style={{ textAlign: 'center' }}>
-          <h2>You scored {score} / {order.length}</h2>
-          <p className="muted">{score === order.length ? 'Referee material!' : score >= order.length * 0.7 ? 'Solid knowledge — review the ones you missed.' : 'Worth another read of the rules section.'}</p>
-          <p className="small muted">Best score in this browser: {Math.max(best, score)} / {order.length}</p>
-          <button className="btn primary" onClick={restart}>Try again</button>
+          <h2>Ваш результат: {score} / {order.length}</h2>
+          <p className="muted">{score === order.length ? 'Хоч зараз у судді!' : score >= order.length * 0.7 ? 'Міцні знання: перегляньте питання, де помилилися.' : 'Варто ще раз перечитати розділ про правила.'}</p>
+          <p className="small muted">Найкращий результат у цьому браузері: {Math.max(best, score)} / {order.length}</p>
+          <button className="btn primary" onClick={restart}>Спробувати ще</button>
         </div>
       ) : (
         <div className="card section">
           <div className="row small muted" style={{ justifyContent: 'space-between' }}>
-            <span>Question {idx + 1} of {order.length}</span>
-            <span>Score {score}</span>
+            <span>Питання {idx + 1} з {order.length}</span>
+            <span>Рахунок {score}</span>
           </div>
           <div className="bar" style={{ margin: '8px 0 16px' }}><span style={{ width: `${(idx / order.length) * 100}%` }} /></div>
           <p style={{ fontSize: '1.08rem', fontWeight: 600 }}>{q.scenario}</p>
@@ -67,17 +68,17 @@ export function Quiz() {
           </div>
           {picked != null && (
             <div className="notice" role="status" style={{ marginTop: 8 }}>
-              <strong style={{ color: picked === q.answer ? 'var(--good)' : 'var(--bad)' }}>{picked === q.answer ? 'Correct.' : 'Not quite.'}</strong> {q.explanation}
+              <strong style={{ color: picked === q.answer ? 'var(--good)' : 'var(--bad)' }}>{picked === q.answer ? 'Правильно.' : 'Не зовсім.'}</strong> {q.explanation}
             </div>
           )}
           {picked != null && (
             <div className="row" style={{ marginTop: 14, justifyContent: 'flex-end' }}>
-              <button className="btn primary" onClick={next}>{idx + 1 < order.length ? 'Next question' : 'See result'}</button>
+              <button className="btn primary" onClick={next}>{idx + 1 < order.length ? 'Наступне питання' : 'Результат'}</button>
             </div>
           )}
         </div>
       )}
-      <p className="small muted">Simplified for learning. The World Squash Federation rules are the official reference.</p>
+      <p className="small muted">Спрощено для навчання. Офіційне джерело — правила World Squash Federation.</p>
     </div>
   );
 }

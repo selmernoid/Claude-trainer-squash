@@ -15,9 +15,15 @@ An anonymous web portal for improving at squash. No accounts and no tracking. An
 | ✅ | Glossary of 31 terms | Explains the jargon (nick, boast, tramline, let…) |
 | ✅ | Search across topics, drills and glossary | Find "volley" or "lunge" in one step |
 | 🔜 | Diagrams of shot paths and footwork on a court SVG for each topic | Shows ideas that are hard to explain in text |
-| 🔜 | Curated video links (pro matches, technique breakdowns) per topic | Lets players see what good technique looks like |
+| ✅ | **Video library**: 120 curated YouTube videos (lessons, drills, full sessions, tips, pro analysis, matches), filters by type, area and level, click-to-load embeds | Lets players see what good technique looks like |
+| ✅ | **Video sets** (e.g. "З нуля до героя", "Робота ніг: три рівні", "Тренуюся сам") with a playlist player | A guided path instead of a pile of links |
+| ✅ | Videos embedded on topic and area pages and linked from drills | Watch the stroke right next to the advice |
+| ✅ | **«Цікаве» (fun) section**: trick shots, best rallies, legendary matches, bloopers, Olympics | Inspiration and a reason to come back |
+| ✅ | Video database as JSON with schema and maintenance script (validate / oEmbed check / resolve by name via YouTube API) | Lets a separate process grow and clean the catalogue |
+| 🔜 | Scheduled job that runs `videos:check` and `videos:resolve` and opens a PR | Keeps the catalogue fresh without manual work |
+| 🔜 | More Ukrainian-language videos | Most squash coaching on YouTube is in English |
 | 🔜 | Left-handed mode that mirrors all left/right advice | Fairer to the ~10% of players who are left-handed |
-| 💡 | Multilingual content | Squash is popular in non-English-speaking countries |
+| ✅ | Ukrainian interface and content (English removed) | Built for Ukrainian players |
 | 💡 | Doubles and junior/parent sections | Covers other groups of players |
 
 ## 2. Practice and drills
@@ -63,10 +69,10 @@ An anonymous web portal for improving at squash. No accounts and no tracking. An
 
 | Status | Feature |
 |---|---|
-| ✅ | Static single-page app (Vite + React + TypeScript), deploys to any static host; GitHub Pages workflow included |
+| ✅ | Static single-page app (Vite + React + TypeScript), deploys to any static host; VPS deploy workflow included |
 | ✅ | Hash routing, so deep links work without server config |
 | ✅ | Light and dark themes (follows the system), works at phone width, print styles for session plans |
-| ✅ | No cookies, no analytics, no backend |
+| ✅ | No cookies, no analytics, no backend; YouTube players load only on click (youtube-nocookie.com) |
 | 🔜 | Content stored as Markdown/JSON so coaches can contribute through pull requests |
 | 🔜 | Unit tests for the session builder and a Playwright smoke test in CI |
 | 💡 | Accessibility audit (screen-reader pass on the ghosting trainer and the charts) |

@@ -53,3 +53,15 @@ export interface Drill {
 export const LEVELS: Level[] = ['beginner', 'intermediate', 'advanced'];
 
 export const levelRank = (l: Level) => LEVELS.indexOf(l);
+
+export const LEVEL_LABEL: Record<Level, string> = {
+  beginner: 'Початківець',
+  intermediate: 'Середній',
+  advanced: 'Просунутий',
+};
+
+export const PLAYERS_LABEL: Record<Players, string> = {
+  solo: 'Самостійно',
+  pairs: 'У парі',
+  group: 'Група (3+)',
+};

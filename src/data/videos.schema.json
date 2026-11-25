@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Squash Trainer video database",
+  "description": "Curated YouTube videos shown on the portal. Edited by hand or by scripts/videos.mjs. Run `npm run videos:validate` after any change.",
+  "type": "object",
+  "required": ["version", "videos", "collections"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "const": 1 },
+    "videos": { "type": "array", "items": { "$ref": "#/$defs/video" } },
+    "collections": { "type": "array", "items": { "$ref": "#/$defs/collection" } }
+  },
+  "$defs": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "video": {
+      "type": "object",
+      "required": ["id", "title", "kind", "lang", "areas", "note"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/slug", "description": "Stable portal id, used in URLs (/videos/<id>). Never change once published." },
+        "youtubeId": { "type": "string", "pattern": "^[A-Za-z0-9_-]{11}$", "description": "YouTube video id. Absent = not resolved yet; the portal then links to a YouTube search for `query`." },
+        "playlistId": { "type": "string", "pattern": "^[A-Za-z0-9_-]{10,64}$", "description": "YouTube playlist id, for entries that are a whole playlist." },
+        "start": { "type": "integer", "minimum": 0, "description": "Start the video at this many seconds." },
+        "query": { "type": "string", "description": "Search phrase used by `videos:resolve` to find a youtubeId, and by the portal as a fallback link." },
+        "title": { "type": "string", "description": "Title shown on the portal, in Ukrainian." },
+        "originalTitle": { "type": "string", "description": "Title on YouTube (filled by `videos:check`)." },
+        "channel": { "type": "string", "description": "YouTube channel name (filled by `videos:check`)." },
+        "kind": { "enum": ["lesson", "drill", "session", "howto", "analysis", "match", "fun"] },
+        "lang": { "type": "string", "description": "Spoken language: en, uk, …" },
+        "level": { "enum": ["beginner", "intermediate", "advanced"] },
+        "areas": { "type": "array", "items": { "enum": ["technique", "serve-return", "movement", "tactics", "fitness", "mental", "rules", "gear"] } },
+        "topics": { "type": "array", "items": { "type": "string", "pattern": "^[a-z-]+/[a-z0-9-]+$" }, "description": "Topic pages that embed this video, as <areaId>/<topicId>." },
+        "drills": { "type": "array", "items": { "type": "string" }, "description": "Drill ids this video demonstrates." },
+        "tags": { "type": "array", "items": { "enum": ["tricks", "rallies", "fails", "legend", "olympics"] }, "description": "Sections of the «Цікаве» page." },
+        "note": { "type": "string", "description": "One or two sentences in Ukrainian: what to watch for." },
+        "status": { "enum": ["ok", "unavailable", "not-embeddable", "auto"], "description": "Set by scripts. `auto` = found by search, needs a human look. Entries that are not ok are hidden." },
+        "checkedAt": { "type": "string", "format": "date", "description": "Last time `videos:check` confirmed the status." }
+      },
+      "anyOf": [{ "required": ["youtubeId"] }, { "required": ["playlistId"] }, { "required": ["query"] }]
+    },
+    "collection": {
+      "type": "object",
+      "required": ["id", "title", "description", "videoIds"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "level": { "enum": ["beginner", "intermediate", "advanced"] },
+        "videoIds": { "type": "array", "items": { "type": "string" }, "minItems": 1, "description": "Video ids in watching order." }
+      }
+    }
+  }
+}

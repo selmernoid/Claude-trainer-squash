@@ -15,10 +15,10 @@ interface Settings {
 const DEFAULTS: Settings = { rounds: 8, work: 30, rest: 30, pace: 3.5, spots: ['FL', 'FR', 'ML', 'MR', 'BL', 'BR'], voice: true, beep: true };
 
 const PRESETS: { name: string; s: Partial<Settings> }[] = [
-  { name: 'Beginner', s: { rounds: 6, work: 20, rest: 40, pace: 5 } },
-  { name: 'Club', s: { rounds: 8, work: 30, rest: 30, pace: 3.5 } },
-  { name: 'Hard', s: { rounds: 10, work: 45, rest: 30, pace: 2.8 } },
-  { name: 'Front–back', s: { spots: ['FL', 'FR', 'BL', 'BR'] } },
+  { name: 'Початківець', s: { rounds: 6, work: 20, rest: 40, pace: 5 } },
+  { name: 'Клубний', s: { rounds: 8, work: 30, rest: 30, pace: 3.5 } },
+  { name: 'Важкий', s: { rounds: 10, work: 45, rest: 30, pace: 2.8 } },
+  { name: 'Уперед–назад', s: { spots: ['FL', 'FR', 'BL', 'BR'] } },
 ];
 
 type Phase = 'idle' | 'countdown' | 'work' | 'rest' | 'done';
@@ -66,7 +66,10 @@ export function Ghosting() {
     try {
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
-      u.rate = 1.15;
+      u.lang = 'uk-UA';
+      const voice = window.speechSynthesis.getVoices().find((v) => v.lang.toLowerCase().startsWith('uk'));
+      if (voice) u.voice = voice;
+      u.rate = 1.1;
       window.speechSynthesis.speak(u);
     } catch { /* speech unavailable */ }
   }, []);
@@ -108,13 +111,13 @@ export function Ghosting() {
           if (e.round >= s.rounds) {
             e.phase = 'done';
             beep(660, 600);
-            say('Session complete. Well done.');
+            say('Тренування завершено. Молодець!');
             releaseWake();
           } else {
             e.phase = 'rest';
             e.phaseEnds = now + s.rest * 1000;
             beep(500, 400);
-            say('Rest');
+            say('Відпочинок');
           }
         } else if (e.phase === 'rest') {
           e.phase = 'work';
@@ -145,7 +148,7 @@ export function Ghosting() {
       wake.current = (await nav.wakeLock?.request('screen')) ?? null;
     } catch { /* not supported */ }
     eng.current = { ...fresh(), phase: 'countdown', phaseEnds: performance.now() + 5000 };
-    say('Get ready');
+    say('Приготуйтеся');
     force((n) => n + 1);
   };
 
@@ -184,8 +187,8 @@ export function Ghosting() {
 
   return (
     <div>
-      <h1>Ghosting trainer</h1>
-      <p className="lead">Random corner calls with voice and beeps. Move from the T, play a shadow swing, recover. Prop your phone up at the front of the court.</p>
+      <h1>Тренажер гостингу</h1>
+      <p className="lead">Випадкові команди кутів голосом і сигналами. Рухайтеся з Т, робіть замах-імітацію, повертайтеся. Поставте телефон біля фронтальної стіни.</p>
 
       <div className="ghost-stage section">
         <div className="card">
@@ -193,51 +196,51 @@ export function Ghosting() {
         </div>
         <div className="card stack">
           <div className={`ghost-phase ${e.phase}`}>
-            {e.phase === 'idle' && 'Ready'}
-            {e.phase === 'countdown' && 'Get ready'}
-            {e.phase === 'work' && `Work · round ${e.round} / ${settings.rounds}`}
-            {e.phase === 'rest' && `Rest · next round ${e.round + 1} / ${settings.rounds}`}
-            {e.phase === 'done' && 'Done!'}
-            {e.pausedLeft != null && ' · paused'}
+            {e.phase === 'idle' && 'Готово'}
+            {e.phase === 'countdown' && 'Приготуйтеся'}
+            {e.phase === 'work' && `Робота · раунд ${e.round} / ${settings.rounds}`}
+            {e.phase === 'rest' && `Відпочинок · далі раунд ${e.round + 1} / ${settings.rounds}`}
+            {e.phase === 'done' && 'Готово!'}
+            {e.pausedLeft != null && ' · пауза'}
           </div>
           <div className="ghost-time" aria-live="off">{running ? secs : e.phase === 'done' ? '✓' : `${totalMin}′`}</div>
-          <div className="ghost-call" aria-live="assertive">{e.phase === 'work' && e.target ? SPOTS[e.target].label : e.phase === 'rest' ? 'Breathe' : ''}</div>
+          <div className="ghost-call" aria-live="assertive">{e.phase === 'work' && e.target ? SPOTS[e.target].label : e.phase === 'rest' ? 'Дихайте' : ''}</div>
           <div className="row" style={{ justifyContent: 'center' }}>
             {!running ? (
-              <button className="btn primary big" onClick={start}>{e.phase === 'done' ? 'Go again' : 'Start'}</button>
+              <button className="btn primary big" onClick={start}>{e.phase === 'done' ? 'Ще раз' : 'Старт'}</button>
             ) : (
               <>
-                <button className="btn big" onClick={pause}>{e.pausedLeft != null ? 'Resume' : 'Pause'}</button>
-                <button className="btn big danger" onClick={stop}>Stop</button>
+                <button className="btn big" onClick={pause}>{e.pausedLeft != null ? 'Продовжити' : 'Пауза'}</button>
+                <button className="btn big danger" onClick={stop}>Стоп</button>
               </>
             )}
           </div>
-          {(running || e.phase === 'done') && <p className="small muted" style={{ textAlign: 'center', margin: 0 }}>{e.reps} movement{e.reps === 1 ? '' : 's'} called</p>}
+          {(running || e.phase === 'done') && <p className="small muted" style={{ textAlign: 'center', margin: 0 }}>Команд: {e.reps}</p>}
         </div>
       </div>
 
       <section className="card section stack" aria-disabled={running} style={{ opacity: running ? 0.55 : 1, pointerEvents: running ? 'none' : undefined }}>
-        <h2 style={{ margin: 0 }}>Settings</h2>
+        <h2 style={{ margin: 0 }}>Налаштування</h2>
         <div className="row">
           {PRESETS.map((p) => <button key={p.name} className="chip" onClick={() => update(p.s)}>{p.name}</button>)}
-          <button className="chip" onClick={() => setSettings(DEFAULTS)}>Reset</button>
+          <button className="chip" onClick={() => setSettings(DEFAULTS)}>Скинути</button>
         </div>
         <div className="grid">
-          <label className="field">Rounds: {settings.rounds}
+          <label className="field">Раунди: {settings.rounds}
             <input type="range" min={1} max={20} value={settings.rounds} onChange={(ev) => update({ rounds: +ev.target.value })} />
           </label>
-          <label className="field">Work: {settings.work}s
+          <label className="field">Робота: {settings.work} с
             <input type="range" min={10} max={120} step={5} value={settings.work} onChange={(ev) => update({ work: +ev.target.value })} />
           </label>
-          <label className="field">Rest: {settings.rest}s
+          <label className="field">Відпочинок: {settings.rest} с
             <input type="range" min={10} max={120} step={5} value={settings.rest} onChange={(ev) => update({ rest: +ev.target.value })} />
           </label>
-          <label className="field">Call every {settings.pace.toFixed(1)}s
+          <label className="field">Команда кожні {settings.pace.toFixed(1).replace('.', ',')} с
             <input type="range" min={2} max={8} step={0.1} value={settings.pace} onChange={(ev) => update({ pace: +ev.target.value })} />
           </label>
         </div>
         <div>
-          <div className="small muted" style={{ fontWeight: 600, marginBottom: 6 }}>Positions</div>
+          <div className="small muted" style={{ fontWeight: 600, marginBottom: 6 }}>Позиції</div>
           <div className="row">
             {(Object.keys(SPOTS) as CourtSpot[]).map((k) => (
               <button key={k} className="chip" aria-pressed={settings.spots.includes(k)} onClick={() => toggleSpot(k)}>{SPOTS[k].label}</button>
@@ -245,10 +248,10 @@ export function Ghosting() {
           </div>
         </div>
         <div className="row">
-          <button className="chip" aria-pressed={settings.voice} onClick={() => update({ voice: !settings.voice })}>Voice calls</button>
-          <button className="chip" aria-pressed={settings.beep} onClick={() => update({ beep: !settings.beep })}>Beeps</button>
+          <button className="chip" aria-pressed={settings.voice} onClick={() => update({ voice: !settings.voice })}>Голосові команди</button>
+          <button className="chip" aria-pressed={settings.beep} onClick={() => update({ beep: !settings.beep })}>Сигнали</button>
         </div>
-        <p className="small muted" style={{ margin: 0 }}>Total ≈ {totalMin} min. Tip: start slower than you think — quality movement matters more than speed.</p>
+        <p className="small muted" style={{ margin: 0 }}>Усього ≈ {totalMin} хв. Порада: починайте повільніше, ніж здається потрібним: якість руху важливіша за швидкість. Якщо голос звучить дивно, встановіть український голос синтезу мовлення в налаштуваннях телефону.</p>
       </section>
     </div>
   );

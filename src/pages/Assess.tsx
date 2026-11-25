@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import { AREA_BY_ID } from '../data/areas';
 import { ASSESSED_AREAS, ASSESSMENT, SCALE } from '../data/assessment';
 import { DRILLS } from '../data/drills';
-import type { AreaId, Level } from '../data/types';
+import { LEVEL_LABEL, type AreaId, type Level } from '../data/types';
 import { RadarChart } from '../components/RadarChart';
 import { DrillCard } from '../components/DrillCard';
 import { STORE_KEYS, useStored } from '../lib/storage';
+import { count, formatDate } from '../lib/uk';
 
 export interface SavedAssessment {
   date: string;
@@ -56,8 +57,8 @@ export function Assess() {
 
   return (
     <div style={{ maxWidth: 820 }}>
-      <h1>Self-assessment</h1>
-      <p className="lead">Be honest — rate how often each statement is true in real matches, not on your best day. Takes about 3 minutes.</p>
+      <h1>Самооцінка</h1>
+      <p className="lead">Будьте чесні: оцініть, як часто кожне твердження справджується в реальних матчах, а не у ваш найкращий день. Це займе близько 3 хвилин.</p>
       <div className="card section">
         {ASSESSMENT.map((item, idx) => (
           <div key={item.id} className="q">
@@ -81,9 +82,9 @@ export function Assess() {
         ))}
       </div>
       <div className="row section">
-        <button className="btn primary big" disabled={!done} onClick={submit}>See my results</button>
-        <span className="muted small">{answeredCount} / {ASSESSMENT.length} answered</span>
-        {history.length > 0 && <button className="btn ghost" onClick={() => setShowResult(true)}>Back to last results</button>}
+        <button className="btn primary big" disabled={!done} onClick={submit}>Показати результати</button>
+        <span className="muted small">Відповіли на {answeredCount} з {ASSESSMENT.length}</span>
+        {history.length > 0 && <button className="btn ghost" onClick={() => setShowResult(true)}>До останніх результатів</button>}
       </div>
     </div>
   );
@@ -110,23 +111,23 @@ function Results({ history, onRetake, onClear }: { history: SavedAssessment[]; o
 
   return (
     <div>
-      <h1>Your skill profile</h1>
+      <h1>Ваш профіль навичок</h1>
       <p className="lead">
-        Assessed {new Date(last.date).toLocaleDateString()} · estimated level: <span className={`badge ${level}`}>{level}</span>
+        Оцінка від {formatDate(last.date)} · орієнтовний рівень: <span className={`badge ${level}`}>{LEVEL_LABEL[level]}</span>
       </p>
       <div className="grid-2 section">
         <div className="card">
           <RadarChart
             labels={ASSESSED_AREAS.map((a) => AREA_BY_ID[a].short)}
             series={[
-              ...(prevScores ? [{ label: 'Previous', values: ASSESSED_AREAS.map((a) => prevScores[a]), color: 'var(--muted)', dashed: true }] : []),
-              { label: 'Now', values: ASSESSED_AREAS.map((a) => scores[a]), color: '#e0a800' },
+              ...(prevScores ? [{ label: 'Попередня', values: ASSESSED_AREAS.map((a) => prevScores[a]), color: 'var(--muted)', dashed: true }] : []),
+              { label: 'Зараз', values: ASSESSED_AREAS.map((a) => scores[a]), color: '#e0a800' },
             ]}
           />
-          {prevScores && <p className="small muted" style={{ textAlign: 'center', margin: 0 }}>Dashed line: previous assessment ({new Date(prev!.date).toLocaleDateString()})</p>}
+          {prevScores && <p className="small muted" style={{ textAlign: 'center', margin: 0 }}>Пунктир: попередня оцінка ({formatDate(prev!.date)})</p>}
         </div>
         <div className="card">
-          <h2>Scores by area</h2>
+          <h2>Бали за напрямами</h2>
           {ASSESSED_AREAS.map((a) => {
             const area = AREA_BY_ID[a];
             const delta = prevScores ? scores[a] - prevScores[a] : 0;
@@ -149,29 +150,29 @@ function Results({ history, onRetake, onClear }: { history: SavedAssessment[]; o
       </div>
 
       <section className="section">
-        <h2>Where to focus next</h2>
-        <p className="muted">Your three lowest-rated areas, with drills to start with.</p>
+        <h2>На чому зосередитися</h2>
+        <p className="muted">Три напрями з найнижчими оцінками й вправи, з яких варто почати.</p>
         <div className="stack">
           {drills.map(({ area, list }) => (
             <div key={area.id} className="card" style={{ borderLeft: `4px solid ${area.color}` }}>
               <div className="section-head">
                 <h3 style={{ margin: 0 }}>{area.name} · {scores[area.id].toFixed(1)}</h3>
-                <Link className="small" to={`/learn/${area.id}`}>Read the guides →</Link>
+                <Link className="small" to={`/learn/${area.id}`}>Читати теми →</Link>
               </div>
               <div className="grid">{list.map((d) => <DrillCard key={d.id} drill={d} />)}</div>
-              {area.id === 'rules' && <p className="small" style={{ margin: '12px 0 0' }}><Link to="/quiz">Test yourself with the rules quiz →</Link></p>}
+              {area.id === 'rules' && <p className="small" style={{ margin: '12px 0 0' }}><Link to="/quiz">Перевірте себе у вікторині з правил →</Link></p>}
             </div>
           ))}
         </div>
       </section>
 
       <div className="row section">
-        <Link className="btn primary" to={`/plan?focus=${focus.map((f) => f.id).join(',')}&level=${level}`}>Build a session for these areas</Link>
-        <button className="btn" onClick={onRetake}>Retake assessment</button>
+        <Link className="btn primary" to={`/plan?focus=${focus.map((f) => f.id).join(',')}&level=${level}`}>Скласти тренування на ці напрями</Link>
+        <button className="btn" onClick={onRetake}>Пройти знову</button>
         <span className="spacer" />
-        <button className="btn ghost danger" onClick={() => { if (confirm('Delete all saved assessments from this browser?')) onClear(); }}>Delete history</button>
+        <button className="btn ghost danger" onClick={() => { if (confirm('Видалити всі збережені самооцінки з цього браузера?')) onClear(); }}>Видалити історію</button>
       </div>
-      <p className="small muted">Retake every 6–8 weeks to see how you've moved. {history.length} assessment{history.length === 1 ? '' : 's'} saved in this browser.</p>
+      <p className="small muted">Проходьте знову кожні 6–8 тижнів, щоб бачити прогрес. У цьому браузері збережено: {count(history.length, ['самооцінка', 'самооцінки', 'самооцінок'])}.</p>
     </div>
   );
 }

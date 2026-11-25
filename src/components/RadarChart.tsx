@@ -22,7 +22,7 @@ export function RadarChart({ labels, series, max = 5 }: Props) {
   };
   const rings = Array.from({ length: max }, (_, i) => i + 1);
   return (
-    <svg viewBox={`-40 -10 ${size + 80} ${size + 20}`} style={{ width: '100%', maxWidth: 420, display: 'block', margin: '0 auto' }} role="img" aria-label="Skill profile radar chart">
+    <svg viewBox={`-40 -10 ${size + 80} ${size + 20}`} style={{ width: '100%', maxWidth: 420, display: 'block', margin: '0 auto' }} role="img" aria-label="Діаграма профілю навичок">
       {rings.map((ring) => (
         <polygon
           key={ring}

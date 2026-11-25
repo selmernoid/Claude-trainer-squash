@@ -6,114 +6,114 @@ export interface QuizQuestion {
   explanation: string;
 }
 
-const LSN = ['Let', 'Stroke to the striker', 'No let'];
+const LSN = ['Лет', 'Строук на користь того, хто б\'є', 'Ноу лет'];
 
 export const RULES_QUIZ: QuizQuestion[] = [
   {
     id: 'q-clear-effort',
     scenario:
-      'Your opponent plays a loose drive and stands still on the T, blocking your direct path to the ball. You could easily have reached it and played a good shot. You stop and ask.',
+      'Суперник зіграв слабкий драйв і стоїть на Т, перекриваючи вам прямий шлях до м\'яча. Ви легко дістали б його й зіграли добрий удар. Ви зупиняєтеся й просите рішення.',
     options: LSN,
     answer: 1,
     explanation:
-      'The opponent did not make every effort to clear. When the non-striker fails to give direct access, the striker is awarded a stroke.',
+      'Суперник не зробив усього можливого, щоб звільнити дорогу. Коли той, хто не б\'є, не дає прямого доступу до м\'яча, гравцеві присуджують строук.',
   },
   {
     id: 'q-tried-to-clear',
     scenario:
-      'Your opponent hits a decent drop and is genuinely trying to get out of your way, but you bump into them on the way to a ball you would have retrieved — not for a winner.',
+      'Суперник зіграв непоганий дроп і щиро намагається відійти з дороги, але ви натикаєтеся на нього на шляху до м\'яча, який ви дістали б, але не для переможного удару.',
     options: LSN,
     answer: 0,
     explanation:
-      'The striker could have made a good return and the opponent was making every effort to clear, so it is a let — the rally is replayed.',
+      'Ви могли зіграти добрий удар, а суперник робив усе можливе, щоб звільнити дорогу, тож це лет: розіграш переграють.',
   },
   {
     id: 'q-unreachable',
     scenario:
-      'Your opponent hits a perfect drop into the nick. You are deep in the back corner, brush past them on the way forward, and stop to ask for a let.',
+      'Суперник зіграв ідеальний дроп у нік. Ви глибоко в задньому куті, зачіпаєте його на шляху вперед і зупиняєтеся, щоб попросити лет.',
     options: LSN,
     answer: 2,
     explanation:
-      'You could not have reached the ball and made a good return, so there is no let — the opponent wins the rally.',
+      'Ви не дістали б м\'яча й не зіграли б добрий удар, тож лету немає: розіграш виграє суперник.',
   },
   {
     id: 'q-minimal',
     scenario:
-      'Your opponent\'s foot is slightly in your path but you could easily step around it without slowing down. You stop and ask for a let.',
+      'Нога суперника трохи на вашому шляху, але ви легко обійшли б її, не сповільнюючись. Ви зупиняєтеся й просите лет.',
     options: LSN,
     answer: 2,
     explanation:
-      'Minimal interference that does not affect your access or swing is not grounds for a let. Play on.',
+      'Мінімальна перешкода, що не впливає на доступ до м\'яча чи замах, не дає права на лет. Грайте далі.',
   },
   {
     id: 'q-ball-hits-opponent-direct',
     scenario:
-      'You hit a straight drive that would have gone directly to the front wall, but it hits your opponent first. You had not turned and the shot was good.',
+      'Ви граєте прямий драйв, що полетів би прямо у фронтальну стіну, але м\'яч спершу влучає в суперника. Ви не розверталися, і удар був добрий.',
     options: LSN,
     answer: 1,
     explanation:
-      'When the ball, travelling directly to the front wall, hits the opponent and the return would have been good, the striker wins a stroke.',
+      'Коли м\'яч, що летить прямо у фронтальну стіну, влучає в суперника, а удар був би добрим, гравець, що бив, отримує строук.',
   },
   {
     id: 'q-ball-hits-opponent-side',
     scenario:
-      'You play a boast that would have hit the side wall first and then the front wall, but it hits your opponent before reaching the side wall. It was not going to be a winner.',
+      'Ви граєте бост, який спершу влучив би в бічну стіну, а потім у фронтальну, але м\'яч влучає в суперника ще до бічної стіни. Переможним удар не був би.',
     options: LSN,
     answer: 0,
     explanation:
-      'If the ball would have hit another wall before the front wall, a let is played (unless it would have been a winning return, in which case it is a stroke).',
+      'Якщо м\'яч мав би влучити в іншу стіну до фронтальної, грається лет (якщо тільки удар не був би переможним; тоді строук).',
   },
   {
     id: 'q-turning',
     scenario:
-      'You follow the ball around in the back corner ("turning") and your shot hits your opponent standing in the middle.',
-    options: ['Let', 'Stroke to the striker', 'Stroke to the opponent'],
+      'Ви проводжаєте м\'яч у задньому куті (робите «розворот»), і ваш удар влучає в суперника, що стоїть посередині.',
+    options: ['Лет', 'Строук на користь того, хто б\'є', 'Строук на користь суперника'],
     answer: 2,
     explanation:
-      'If the striker turns and then hits the opponent with the ball, the opponent wins the rally. If you turn and see your opponent in the way, stop and ask for a let instead of hitting.',
+      'Якщо гравець розвернувся й влучив м\'ячем у суперника, розіграш виграє суперник. Якщо після розвороту бачите суперника на лінії удару, зупиніться й попросіть лет, а не бийте.',
   },
   {
     id: 'q-playing-on',
     scenario:
-      'Your opponent bumps you slightly; you carry on, play a weak shot, lose the rally, then ask for a let.',
+      'Суперник легко зачіпає вас; ви продовжуєте, граєте слабкий удар, програєте розіграш і тоді просите лет.',
     options: LSN,
     answer: 2,
     explanation:
-      'If you play on through interference you accept it. You must stop and request a let at the time, not after seeing how the rally turns out.',
+      'Якщо ви граєте далі попри перешкоду, ви з нею погодилися. Лет треба просити одразу, а не після того, як побачили, чим закінчився розіграш.',
   },
   {
     id: 'q-broken-ball',
-    scenario: 'In the middle of a rally the ball splits.',
-    options: ['Let — replay the rally', 'Point to whoever hit last', 'Point to the server'],
+    scenario: 'Посеред розіграшу м\'яч тріскає.',
+    options: ['Лет: розіграш переграють', 'Очко тому, хто бив останнім', 'Очко подавальнику'],
     answer: 0,
-    explanation: 'A ball that breaks during a rally results in a let; replace the ball and replay.',
+    explanation: 'Якщо м\'яч зламався під час розіграшу, це лет: замініть м\'яч і переграйте.',
   },
   {
     id: 'q-serve-line',
-    scenario: 'Your serve lands exactly on the short line of the opposite back quarter.',
-    options: ['Good serve', 'Fault — receiver wins the rally', 'Let — serve again'],
+    scenario: 'Ваша подача падає точно на коротку лінію протилежної задньої чверті.',
+    options: ['Правильна подача', 'Помилка: розіграш виграє приймальник', 'Лет: подавайте ще раз'],
     answer: 1,
-    explanation: 'Lines are out in squash. A serve touching the short line or half-court line is a fault and the receiver wins the rally.',
+    explanation: 'Лінії в сквоші — це аут. Подача, що торкнулася короткої чи середньої лінії, — помилка, і розіграш виграє приймальник.',
   },
   {
     id: 'q-serve-side-first',
-    scenario: 'Your serve hits the side wall before reaching the front wall.',
-    options: ['Good serve', 'Fault', 'Let'],
+    scenario: 'Ваша подача влучає в бічну стіну ще до фронтальної.',
+    options: ['Правильна подача', 'Помилка', 'Лет'],
     answer: 1,
-    explanation: 'The serve must hit the front wall directly. After that it may hit the side walls before landing.',
+    explanation: 'Подача має влучити у фронтальну стіну напряму. Лише після цього м\'яч може торкнутися бічних стін до приземлення.',
   },
   {
     id: 'q-score',
-    scenario: 'The score is 10-10. What happens next?',
-    options: ['Next point wins', 'A player must lead by two to win', 'First to 15'],
+    scenario: 'Рахунок 10:10. Що далі?',
+    options: ['Наступне очко вирішує', 'Треба вести з перевагою у два очки', 'Граємо до 15'],
     answer: 1,
-    explanation: 'In PAR-11 scoring a game at 10-10 continues until one player is two points ahead.',
+    explanation: 'У рахунку PAR-11 гейм при 10:10 триває, доки один гравець не поведе на два очки.',
   },
   {
     id: 'q-serve-box',
-    scenario: 'You won the last rally as server, serving from the right box. Where do you serve next?',
-    options: ['Right box again', 'Left box', 'Either — your choice'],
+    scenario: 'Ви подавали з правого квадрата й виграли розіграш. Звідки подаєте наступну подачу?',
+    options: ['Знову з правого', 'З лівого', 'З будь-якого, на ваш вибір'],
     answer: 1,
-    explanation: 'A server who wins the rally alternates boxes. A new server (after hand-out) chooses either box.',
+    explanation: 'Подавальник, що виграв розіграш, змінює квадрат. Новий подавальник (після переходу подачі) обирає будь-який квадрат.',
   },
 ];
