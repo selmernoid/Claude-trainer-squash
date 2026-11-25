@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { LEVEL_LABEL } from '../data/types';
 import { embedUrl, isEmbeddable, KIND_LABEL, langLabel, thumbUrl, watchUrl, type Video } from '../data/videos';
+import { pauseOthers, registerPlayer } from '../lib/youtubeSync';
 
 interface PlayerProps {
   video: Video;
@@ -15,6 +16,13 @@ interface PlayerProps {
 export function VideoPlayer({ video, big, autoload }: PlayerProps) {
   const [on, setOn] = useState(Boolean(autoload));
   useEffect(() => setOn(Boolean(autoload)), [video.id, autoload]);
+  const frame = useRef<HTMLIFrameElement>(null);
+  useEffect(() => {
+    if (!on || !frame.current) return;
+    const unregister = registerPlayer(frame.current);
+    pauseOthers(frame.current); // новий плеєр стартує з автозапуском: решту одразу на паузу
+    return unregister;
+  }, [on, video.id]);
   const src = embedUrl(video);
   const thumb = thumbUrl(video);
 
@@ -37,6 +45,7 @@ export function VideoPlayer({ video, big, autoload }: PlayerProps) {
     <div className={`player${big ? ' big' : ''}`}>
       {on ? (
         <iframe
+          ref={frame}
           src={src}
           title={video.title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

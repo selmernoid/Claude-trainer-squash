@@ -95,7 +95,9 @@ export function watchUrl(v: Video) {
 
 // youtube-nocookie.com: YouTube не ставить cookies, доки людина не почне дивитися.
 export function embedUrl(v: Video, autoplay = true) {
-  const params = new URLSearchParams({ rel: '0', modestbranding: '1', hl: 'uk', cc_lang_pref: 'uk' });
+  // enablejsapi + origin дозволяють ставити плеєр на паузу, коли запускається інший (src/lib/youtubeSync.ts).
+  const params = new URLSearchParams({ rel: '0', modestbranding: '1', hl: 'uk', cc_lang_pref: 'uk', enablejsapi: '1' });
+  if (typeof window !== 'undefined') params.set('origin', window.location.origin);
   if (autoplay) params.set('autoplay', '1');
   if (v.start) params.set('start', String(v.start));
   if (v.youtubeId) return `https://www.youtube-nocookie.com/embed/${v.youtubeId}?${params}`;
